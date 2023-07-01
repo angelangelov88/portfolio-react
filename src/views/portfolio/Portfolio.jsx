@@ -1,4 +1,9 @@
 import '../../style/style.scss';
+import reflection from '../../images/netmatters-reflection2.png'
+import axure from '../../images/axure-prototype2.png'
+import portfolio from '../../images/portfolio.PNG'
+import jsReflection from '../../images/js-reflection.PNG'
+import imageAssigner from '../../images/image-assigner-task.PNG'
 
 function Portfolio() {
 //Side navbar
@@ -250,9 +255,9 @@ function emailValidationFunction() {
             <div class="project-1 project">
               <a href="https://angelangelov88.github.io/" target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/netmatters-reflection2.png" class="photo-reflection photo-project" alt="reflection" />
+                  <img src={reflection} class="photo-reflection photo-project" alt="reflection" />
                 </div>
-                <p class="project-title project-title-1">Netmatters Reflection</p>   
+                <p class="project-title project-title-1">Netmatters Reflection</p> 
               </a>         
               <a href="https://github.com/angelangelov88/angelangelov88.github.io" target="_blank" class="project-details" rel="noreferrer" >View Project Files
                 <i class="fas fa-arrow-circle-right"></i>
@@ -267,7 +272,7 @@ function emailValidationFunction() {
             <div class="project-2 project">
               <a href="https://axure-project.angel-angelov.netmatters-scs.co.uk" target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/axure-prototype2.png" class="photo-axure photo-project" alt="axure" />
+                  <img src={axure} class="photo-axure photo-project" alt="axure" />
                 </div>
                 <p class="project-title project-title-2">Axure Prototype</p>  
               </a>      
@@ -283,7 +288,7 @@ function emailValidationFunction() {
     {/* <!-- Project 3 --> */}
             <div class="project-3 project">
                 <div class="img-container">
-                  <img src="images/portfolio.PNG" class="photo-portfolio photo-project" alt="portfolio" /></div>
+                  <img src={portfolio} class="photo-portfolio photo-project" alt="portfolio" /></div>
                 <p class="project-title project-title-3">Portfolio</p> 
                     
               <a href="https://github.com/angelangelov88/portfolio" target="_blank" class="project-details" rel="noreferrer">View Project Files
@@ -298,7 +303,7 @@ function emailValidationFunction() {
             <div class="project-4 project">          
               <a href="https://reflection.angel-angelov.netmatters-scs.co.uk/" target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/js-reflection.PNG" class="photo-reflection-js photo-project" alt="change-name" /></div>
+                  <img src={jsReflection} class="photo-reflection-js photo-project" alt="change-name" /></div>
                 <p class="project-title project-title-3">JavaScript Reflection</p> 
               </a>       
               <a href="https://github.com/angelangelov88/Reflection-JavaScript" target="_blank" class="project-details" rel="noreferrer">View Project Files
@@ -313,7 +318,7 @@ function emailValidationFunction() {
             <div class="project-5 project">          
               <a href="http://js-image-assigner.angel-angelov.netmatters-scs.co.uk/"  target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/image-assigner-task.PNG" class="photo-image-assigner photo-project" alt="assigner" /></div>
+                  <img src={imageAssigner} class="photo-image-assigner photo-project" alt="assigner" /></div>
                 <p class="project-title project-title-3">Image Assigner</p>  
               </a>      
               <a href="https://github.com/angelangelov88/JavaScript-Reflection-Task2" target="_blank" class="project-details" rel="noreferrer">View Project Files 
@@ -351,10 +356,10 @@ function emailValidationFunction() {
                 <div class="get-in-touch-2">
                   <h2>Get In Touch</h2>
                   <ul class="contact-ul">
-                    <li>sed interdum est vel solicitudin bibendum. Proin at accumsan nulla, non facilisis massa.</li>
+                    <li>Interested in working together? Fill out the form below with your details or contact me with any questions you may have.</li>
                     <li class="phone"><a href="tel:07553692967">07553692967</a></li>
                     <li class="phone"><a href="mailto:ang.angelov88@gmail.com">ang.angelov88@gmail.com</a></li>
-                    <li>Phasellus cursus urna in neque faucibus, eu dapibus magna vehicula. Sed tempus cursus mauris et scelerisque. Pellentesque ornare mi at fringilla egestas.</li> 
+                    <li>I'll get back to you as soon as I can. That's a promise!</li> 
                   </ul>
                 </div>
               </div>
@@ -367,7 +372,7 @@ function emailValidationFunction() {
                   <input id="email" type="email" required="required" placeholder="Email Address*" />
                   <label id="error-message">Make sure you type a valid email address!</label>
                   <input id="subject" type="text" required="required" placeholder="Subject*" />
-                  <input id="message" type="text" placeholder="Your text here..." />
+                  <textarea id="message" type="text" placeholder="Your text here..." />
                   <input id="submit" type="submit" value="Submit" />
                 </div>
               </form>
