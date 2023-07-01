@@ -1,7 +1,157 @@
+import '../../style/style.scss';
+
 function Portfolio() {
+//Side navbar
+//I added variables for all the elements in order to make the code readable
+const navbar = document.getElementsByClassName("navbar")[0];
+const hamburger = document.getElementsByClassName('hamburger')[0];
+const body = document.body;
+const gradient = document.getElementsByClassName('gradient-div-brand')[0];
+const fontColor = document.getElementById('app');
+const scrollDisappear = document.getElementsByClassName('scroll')[0];
+const blocker = document.getElementsByClassName('blocker')[0];
+
+
+//This is the function that is triggered on click on burger menu button. It basically shows the sidebar, changes the colour of the background, the color of the hero text, stops the scrolling option for the page and shows the blocker div on top. This last thing allows the user to close the sidebar by clicking anywhere but on it.
+function openNav() {
+    navbar.style.display = 'block';
+    // gradient.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+    fontColor.style.color = '#ffffff9e';
+    scrollDisappear.style.position = 'initial';
+    blocker.style.zIndex = 100;
+    blocker.style.display = 'block';
+    body.style.overflow = 'hidden';
+}
+
+//The second function was needed because console gives errors as some of the properties in the first one are not available on other pages. This way on click it opens the sidenav for all pages but index.html
+function openNav2() {
+  navbar.style.display = 'block';
+  blocker.style.zIndex = 100;
+  // blocker.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+  blocker.style.display = 'block';
+  body.style.overflow = 'hidden';
+}
+
+
+//This is the function that closes the sidebar on clicking anywhere on the page but the sidebar
+function closeNav() {
+    navbar.style.display = 'none';
+    navbar.style.backgroundColor = 'none';
+    // gradient.style.backgroundColor = 'initial';
+    fontColor.style.color = 'white';
+    scrollDisappear.style.position = 'block';
+    blocker.style.zIndex = 0;
+    blocker.style.display = 'none';
+    body.style.overflow = 'auto';
+    hamburger.style.left = '0px';
+  }
+
+//Again second function for all the pages but index.html
+  function closeNav2() {
+    navbar.style.display = 'none';
+    navbar.style.backgroundColor = 'none';
+    // gradient.style.backgroundColor = 'initial';
+    // fontColor.style.color = 'white';
+    // scrollDisappear.style.position = 'block';
+    blocker.style.zIndex = 0;
+    // blocker.style.backgroundColor = 'initial';
+    blocker.style.display = 'none';
+    body.style.overflow = 'auto';
+    hamburger.style.left = '0px';
+  }
+
+
+//Second function for all the pages but index.html. It does absolutely the same as the next one but ignores some of the elements that do not exist on those pages
+// function showNavbar2(y) {
+//   if (y.matches) { // If media query matches
+//     navbar.style.display = 'block';
+//     blocker.style.display = 'none';
+//     body.style.overflow = 'auto';
+//     hamburger.style.left = '0px';
+//     blocker.style.backgroundColor = 'initial';
+//   }  else {
+//     navbar.style.display = 'none';
+//   }
+// }
+
+// var y = window.matchMedia("(min-width: 768px)")
+// showNavbar2(y) // Call listener function at run time
+// y.addListener(showNavbar2) // Attach listener function on state changes
+
+
+  //This has been added in order to make sure that the sidebar for small screens disappears if the user changes their viewport. Now they can change between small and big screen and there should be no issues. 
+  // function showNavbar(x) {
+  //   if (x.matches) { // If media query matches
+  //     navbar.style.display = 'block';
+  //     blocker.style.zIndex = 0;
+  //     gradient.style.backgroundColor = 'initial';
+  //     fontColor.style.color = 'white';
+  //     scrollDisappear.style.position = 'block';
+  //     blocker.style.zIndex = 0;
+  //     body.style.overflow = 'auto';
+  //     hamburger.style.left = '0px';
+  //   }  else {
+  //     navbar.style.display = 'none';
+  //   }
+  // }
+  
+  // var x = window.matchMedia("(min-width: 768px)")
+  // showNavbar(x) // Call listener function at run time
+  // x.addListener(showNavbar) // Attach listener function on state changes
+  
+  
+// jQuery plugin for typing effect for the brand text
+var app = document.getElementById('app');
+const typewriter = 'fggf';
+// var typewriter = new Typewriter(app, {
+//   loop: false,
+//   cursor: "",
+//   delay: 50
+// });
+
+// typewriter.typeString('<h1>My Name is Angel Angelov</h1>').pauseFor(50).typeString('<h2 class="strapline">I\'m a Web Developer').start(); 
+
+
+
+//Code for the More info button in projects
+// (function showText(){
+//   var buttons = document.getElementById('portfolio-link').getElementsByTagName('button');
+//     for (i = 0; i < buttons.length; i++) {
+//       buttons[i].addEventListener('click', function (e)  {
+//         e.target.nextElementSibling.classList.toggle('shown');
+//         if (e.target.innerHTML === 'Close') {
+//           e.target.innerHTML = 'More Info...';
+//         }
+//         else {
+//           e.target.innerHTML = 'Close';
+//         }
+//       });
+//   };
+// })();
+
+
+//Email validation
+const email = document.getElementById('email');
+let validation = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const error = document.getElementById('error-message');
+
+function emailValidationFunction() {
+  if (email.value.match(validation)) {
+    console.log('Email correct');
+    error.style.display = 'none';
+    return true;
+  } else {
+    console.log('error with email');
+    error.style.display = 'block';
+    return false;
+  }
+}
+
+// document.getElementById("submit").addEventListener("click", emailValidationFunction);
 
   return (
-    // <!-- Font Awesome -->
+    <>
+    {/* // <!-- Font Awesome -->
         // <script src="https://kit.fontawesome.com/ebb02e5adb.js" crossorigin="anonymous"></script>
         
     // <!-- CSS -->
@@ -11,11 +161,8 @@ function Portfolio() {
         // <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     
     // <!-- Favicon -->
-        // <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
-    <>
-
-        <h1>Angel's Portfolio</h1>
-    
+        // <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/> */}
+    <header>
     {/* // <!-- SIDE NAVBAR for screens over M--> */}
           <nav class="navbar">
             <div class="logo">
@@ -41,19 +188,19 @@ function Portfolio() {
             <div class="social-media">
               <div class="social-links">
                   <div class="gap"></div>
-                <a class="github" href="https://github.com/angelangelov88" target="_blank">
+                <a class="github" href="https://github.com/angelangelov88" target="_blank" rel="noreferrer">
                   <i class="fab fa-github social-logo"></i>
                 </a>
                   <div class="gap"></div>
-                <a class="linkedin" href="https://www.linkedin.com/in/ang-angelov/" target="_blank">
+                <a class="linkedin" href="https://www.linkedin.com/in/ang-angelov/" target="_blank" rel="noreferrer">
                   <i class="fab fa-linkedin-in social-logo"></i>
                 </a>
                   <div class="gap"></div>
-                  <a class="facebook" href="https://www.facebook.com/ang.angelov88" target="_blank">
+                  <a class="facebook" href="https://www.facebook.com/ang.angelov88" target="_blank" rel="noreferrer">
                     <i class="fab fa-facebook-f social-logo"></i>
                   </a>
                     <div class="gap"></div>
-                  <a class="twitter" href="https://twitter.com/Angel69010637" target="_blank">
+                  <a class="twitter" href="https://twitter.com/Angel69010637" target="_blank" rel="noreferrer">
                     <i class="fab fa-twitter social-logo"></i>
                   </a>
               </div>
@@ -73,7 +220,7 @@ function Portfolio() {
           </div>
         </header>
       
-    // <!-- Beginning of the main content. I have added content div to wrap everything up-->
+     {/* Beginning of the main content. I have added content div to wrap everything up */}
         <div class="content">
     
     {/* <!-- Hero image and text part --> */}
@@ -81,15 +228,16 @@ function Portfolio() {
             <div class="gradient-div-brand"></div>
     
             <div class="hero-text">
-              {/* <!-- <h1>My Name is Angel Angelov</h1>
-              <h2>I'm a Web Developer</h2> --> */}
+              <h1>My Name is Angel Angelov</h1>
+              <h2>I'm a Software Developer</h2>
               <div id="app"></div>
     
             </div>
     {/* <!-- Scroll down text and arrow --> */}
             <div class="scroll">
-              <a href="#portfolio-link" class="scroll-down-arrow">Scroll Down
-                <br>
+              <a href="#portfolio-link" class="scroll-down-arrow">
+              Scroll Down
+                <br />
               <i class="fas fa-chevron-down"></i>
               </a>
             </div>
@@ -100,13 +248,13 @@ function Portfolio() {
     
     {/* <!-- Project 1 --> */}
             <div class="project-1 project">
-              <a href="https://angelangelov88.github.io/" target="_blank">
+              <a href="https://angelangelov88.github.io/" target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/netmatters-reflection2.png" class="photo-reflection photo-project" alt="photo-reflection">
+                  <img src="images/netmatters-reflection2.png" class="photo-reflection photo-project" alt="reflection" />
                 </div>
                 <p class="project-title project-title-1">Netmatters Reflection</p>   
               </a>         
-              <a href="https://github.com/angelangelov88/angelangelov88.github.io" target="_blank" class="project-details" >View Project Files
+              <a href="https://github.com/angelangelov88/angelangelov88.github.io" target="_blank" class="project-details" rel="noreferrer" >View Project Files
                 <i class="fas fa-arrow-circle-right"></i>
               </a>
               
@@ -117,13 +265,13 @@ function Portfolio() {
     
     {/* <!-- Project 2 --> */}
             <div class="project-2 project">
-              <a href="https://axure-project.angel-angelov.netmatters-scs.co.uk" target="_blank">
+              <a href="https://axure-project.angel-angelov.netmatters-scs.co.uk" target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/axure-prototype2.png" class="photo-axure photo-project" alt="photo-axure">
+                  <img src="images/axure-prototype2.png" class="photo-axure photo-project" alt="axure" />
                 </div>
                 <p class="project-title project-title-2">Axure Prototype</p>  
               </a>      
-              <a href="https://github.com/angelangelov88/axure" target="_blank" class="project-details">View Project Files 
+              <a href="https://github.com/angelangelov88/axure" target="_blank" class="project-details" rel="noreferrer">View Project Files 
                 <i class="fas fa-arrow-circle-right"></i>
               </a>
               <button class="btn-project more-info-btn-2">More Info...</button>
@@ -135,10 +283,10 @@ function Portfolio() {
     {/* <!-- Project 3 --> */}
             <div class="project-3 project">
                 <div class="img-container">
-                  <img src="images/portfolio.PNG" class="photo-portfolio photo-project" alt="photo-portfolio"></div>
+                  <img src="images/portfolio.PNG" class="photo-portfolio photo-project" alt="portfolio" /></div>
                 <p class="project-title project-title-3">Portfolio</p> 
                     
-              <a href="https://github.com/angelangelov88/portfolio" target="_blank" class="project-details">View Project Files
+              <a href="https://github.com/angelangelov88/portfolio" target="_blank" class="project-details" rel="noreferrer">View Project Files
                 <i class="fas fa-arrow-circle-right"></i>
               </a>
               <button class="btn-project more-info-btn-3">More Info...</button>
@@ -148,12 +296,12 @@ function Portfolio() {
     
     {/* <!-- Project 4 --> */}
             <div class="project-4 project">          
-              <a href="https://reflection.angel-angelov.netmatters-scs.co.uk/" target="_blank">
+              <a href="https://reflection.angel-angelov.netmatters-scs.co.uk/" target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/js-reflection.PNG" class="photo-reflection-js photo-project" alt="photo-change-name"></div>
+                  <img src="images/js-reflection.PNG" class="photo-reflection-js photo-project" alt="change-name" /></div>
                 <p class="project-title project-title-3">JavaScript Reflection</p> 
               </a>       
-              <a href="https://github.com/angelangelov88/Reflection-JavaScript" target="_blank" class="project-details">View Project Files
+              <a href="https://github.com/angelangelov88/Reflection-JavaScript" target="_blank" class="project-details" rel="noreferrer">View Project Files
                 <i class="fas fa-arrow-circle-right"></i>
               </a>
               <button class="btn-project more-info-btn-4">More Info...</button>
@@ -163,12 +311,12 @@ function Portfolio() {
     
     {/* <!-- Project 5 --> */}
             <div class="project-5 project">          
-              <a href="http://js-image-assigner.angel-angelov.netmatters-scs.co.uk/"  target="_blank">
+              <a href="http://js-image-assigner.angel-angelov.netmatters-scs.co.uk/"  target="_blank" rel="noreferrer">
                 <div class="img-container">
-                  <img src="images/image-assigner-task.PNG" class="photo-image-assigner photo-project" alt="photo-image-assigner"></div>
+                  <img src="images/image-assigner-task.PNG" class="photo-image-assigner photo-project" alt="assigner" /></div>
                 <p class="project-title project-title-3">Image Assigner</p>  
               </a>      
-              <a href="https://github.com/angelangelov88/JavaScript-Reflection-Task2" target="_blank" class="project-details">View Project Files 
+              <a href="https://github.com/angelangelov88/JavaScript-Reflection-Task2" target="_blank" class="project-details" rel="noreferrer">View Project Files 
                 <i class="fas fa-arrow-circle-right"></i>
               </a>
               <button class="btn-project more-info-btn-5">More Info...</button>
@@ -178,11 +326,13 @@ function Portfolio() {
     
     {/* <!-- Project 6 --> */}
             <div class="project-6 project">          
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#"  target="_blank">
                 <div class="img-container">
-                  <img src="images/code.jpg" class="photo-change-name photo-project" alt="photo-change-name"></div>
+                  <img src="images/code.jpg" class="photo-change-name photo-project" alt="change-name" /></div>
                 <p class="project-title project-title-3">Project 6</p> 
               </a>       
+               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" class="project-details">View Project Files 
                 <i class="fas fa-arrow-circle-right"></i>
               </a>
@@ -212,13 +362,13 @@ function Portfolio() {
     {/* <!-- Actual contact form with the fields and placeholders--> */}
               <form class="contact-form">
                 <div class="contact-form-2">
-                  <input id="fname" type="text" required="required" placeholder="First Name*">
-                  <input id="lname" type="text" required="required" placeholder="Last Name*">
-                  <input id="email" type="email" required="required" placeholder="Email Address*">
+                  <input id="fname" type="text" required="required" placeholder="First Name*" />
+                  <input id="lname" type="text" required="required" placeholder="Last Name*" />
+                  <input id="email" type="email" required="required" placeholder="Email Address*" />
                   <label id="error-message">Make sure you type a valid email address!</label>
-                  <input id="subject" type="text" required="required" placeholder="Subject*">
-                  <input id="message" type="text" placeholder="Your text here...">
-                  <input id="submit" type="submit" value="Submit">
+                  <input id="subject" type="text" required="required" placeholder="Subject*" />
+                  <input id="message" type="text" placeholder="Your text here..." />
+                  <input id="submit" type="submit" value="Submit" />
                 </div>
               </form>
             </div>
@@ -228,7 +378,7 @@ function Portfolio() {
           <div class="scroll-up">
             <a href="index.html" class="scroll-up-text">
             <i class="fas fa-chevron-up"></i>
-            <br>
+            <br />
             Back To Top
             </a>
           </div>

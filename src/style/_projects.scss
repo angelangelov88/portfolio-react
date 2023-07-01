@@ -1,0 +1,241 @@
+//Container of the projects
+.projects-container {
+  padding: 30px 19px;
+  @media only screen and (min-width: $break-m) {  
+    display: flex;
+    justify-content: center;;
+    flex-wrap: wrap;
+    padding: 30px 22px;
+}
+  @media only screen and (min-width: $break-xxl) {
+    max-width: 1650px;
+}
+}
+
+
+//Gradient div
+.gradient-div-brand {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+//The project card container. This code applies to all cards. I have changed the width of the cards to make them looks the same and act the same on different screen sizes
+.project {
+  width: auto;
+  height: auto;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding-bottom: 23px;
+  position: relative;
+  @media only screen and (min-width: $break-s) {
+    //height: 332px;
+  }
+  @media only screen and (min-width: $break-m) {
+    width: 600px;
+    height: 354px;
+    padding-bottom: 9px;
+}
+  @media only screen and (min-width: $break-l) {
+    margin: 10px;
+    height: 26rem;
+    width: 340px;
+    padding-bottom: 0;
+}
+  @media only screen and (min-width: $break-xl) {
+   width: 444px;
+}
+  @media only screen and (min-width: $break-xxl) {
+    width: 427px;
+}
+}
+
+//Container for the photo. I added it in order to make sure that the hover effect works fine
+.img-container {
+  overflow: hidden;
+  @media only screen and (min-width: $break-l) {
+    max-height: 19rem;
+    margin-bottom: 0.8rem;
+}
+}
+
+//Adjusting the images of the project, so that they look good
+.photo-reflection {
+  position: relative;
+  left: 0;
+  @media only screen and (min-width: $break-l) {
+    left: -7rem;
+}
+}
+
+.photo-axure {
+  position: relative;
+  left: 0;
+  @media only screen and (min-width: $break-l) {
+    left: -236px;
+}
+  @media only screen and (min-width: $break-xl) {
+    left: -8rem;
+}
+}
+
+.photo-portfolio {
+  position: relative;  
+  left: 0;
+  @media only screen and (min-width: $break-l) {
+    left: -158px;
+}
+  @media only screen and (min-width: $break-xl) {
+    left: -7rem;
+}
+}
+
+.photo-reflection-js {
+  position: relative;
+  left: 0;
+  @media only screen and (min-width: $break-l) {
+    left: -119px;
+}
+  @media only screen and (min-width: $break-xl) {
+    left: -4.5rem;
+}
+}
+
+
+.project-title{
+  color: $green-brand;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  max-height: 300px;
+  padding-left: 7px;
+  margin-top: -9px;
+  margin-bottom: -10px;
+  @media only screen and (min-width: $break-s) {
+    margin-bottom: -45px;
+
+}
+  @media only screen and (min-width: $break-m) {
+    font-size: 1.3rem;
+    padding-left: 0;
+    margin-left: 0.3rem;
+    //margin: 1rem;
+}
+  @media only screen and (min-width: $break-xl) {
+    margin-left: 1rem;
+}
+}
+
+.project-title, a {
+  text-decoration: none;
+}
+
+.project-title:hover {
+  text-decoration: underline;
+  color: lighten($color: $green-brand, $amount: 10);
+}
+
+//Button View Project
+.project-details {
+  // margin: 1rem;
+  // margin-bottom: -2rem;
+  // width: 8rem;
+  display: none;
+  position: absolute;
+  left: 1rem;
+  top: 23rem;
+  color: black;
+  @media only screen and (min-width: $break-l) {
+    display: block;
+}
+  @media only screen and (min-width: $break-xl) {
+    //margin-left: 1rem;
+}
+}
+
+.project-details:hover {
+  color: lighten($color: #000000, $amount: 50);
+}
+
+
+//Photo in the project styling
+.photo-project {
+  width: 100%;
+  margin-bottom: 1rem;
+  @media only screen and (min-width: $break-m) {
+    width: 600px;
+    height: 300px;
+}
+}
+
+.photo-project:hover {
+  @media only screen and (min-width: $break-l) {
+  transform: scale(1.1);
+  opacity: .7;
+  transition: 0.4s;
+}
+}
+
+.btn-project {
+  display: none;
+  background-color: $green-brand;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  top: 13px;  
+  float: right;
+  margin-right: 1rem;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  @media only screen and (min-width: $break-s) {
+    display: block;
+}
+  @media only screen and (min-width: $break-m) {
+    top: 10px;
+}
+  @media only screen and (min-width: $break-l) {
+    top: 66px;
+    right: -7px;
+}
+
+}
+
+.btn-project:hover {
+  background-color: darken($color: $green-brand, $amount: 10);
+  cursor: pointer;
+}
+
+//I added this extra code for future - once I add JS and the More info button should display the info
+.text-holder {
+  display: none;
+  background-color: $green-brand;
+  color: white;
+  text-align: left;
+  padding: 0 1rem;
+  border: 2px $green-brand solid;
+  overflow-y: auto;
+  position: absolute;    
+  bottom: 57px;
+  @media only screen and (min-width: $break-m) {
+    bottom: 17%;
+    width: 94%;
+    height: auto;
+    max-height: 72%;
+}
+  @media only screen and (min-width: $break-l) {
+    width: 90%;
+    bottom: 28%;
+}
+  @media only screen and (min-width: $break-xl) {
+    width: 92%;
+}
+}
+
+.shown {
+  display: block;
+}
