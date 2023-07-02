@@ -132,9 +132,15 @@
 
 .about-me {
   border-bottom: 2px transparent solid;
-  width: 6rem;
+  width: 5rem;
   padding-bottom: 1px;
   height: 60px;
+}
+
+.about-me .active {
+  border-bottom: 2px $green-brand solid;
+  padding-bottom: 8px;
+  color: $green-brand;
 }
 
 .about-me:hover {
@@ -148,6 +154,11 @@
   height: 60px;
 }
 
+.my-portfolio .active {
+  border-bottom: 2px $green-brand solid;
+  padding-bottom: 8px;
+  color: $green-brand;
+}
 .my-portfolio:hover {
   border-bottom: 2px $green-brand solid;
 }

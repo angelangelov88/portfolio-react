@@ -1,10 +1,13 @@
-import Portfolio from './views/portfolio/Portfolio';
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/Routes";
 
 function App() {
   return (
-    <div className="App">
-      <Portfolio />
-    </div>
+      <div className="App">
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </div>
   );
 }
 
