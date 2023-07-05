@@ -159,9 +159,9 @@ function emailValidationFunction() {
         <div className="content">
     
     {/* <!-- Hero image and text part --> */}
-          <div class="hero-image">
-            <div class="gradient-div-brand" />
-            <div class="hero-text">
+          <div className="hero-image">
+            <div className="gradient-div-brand" />
+            <div className="hero-text">
               <Typewriter 
                 text="My Name is Angel Angelov"
                 text2="I'm a Software Developer" 
@@ -181,7 +181,7 @@ function emailValidationFunction() {
       <Contact />
     {/* <!--Scroll up button  --> */}
           <div className="scroll-up scroll-up-text" onClick={() => document.getElementsByClassName('content')[0].scrollIntoView({ behavior: 'smooth' })}>
-            <i class="fas fa-chevron-up"></i>
+            <i className="fas fa-chevron-up"></i>
             <br />
             Back To Top
           </div>
