@@ -1,6 +1,18 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
+  // Function to move the viewpoint to the projects when the link is clicked
+  
+  const handlePortfolioClick = () => {
+    const element = document.getElementById('portfolio-link');
+    if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
+  }
+
+  const handleContactClick = () => {
+    const element = document.getElementById('contact');
+    if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
+  }
+
   return ( 
         <header>
     {/* // <!-- SIDE NAVBAR for screens over M--> */}
@@ -13,10 +25,7 @@ const Navigation = () => {
                 <NavLink to="/about-me">About Me</NavLink>
               </div>
               <div class="my-portfolio">
-                <a href="#portfolio-link">My Portfolio</a>
-              </div>
-              <div class="my-portfolio">
-                <NavLink to="./#portfolio-link">My PortfolioR</NavLink>
+                <NavLink to="./#portfolio-link" onClick={handlePortfolioClick}>My Portfolio</NavLink>
               </div>
               {/* <div class="coding-examples">
                 <a href="coding-examples.html">Coding Examples</a>
@@ -26,8 +35,12 @@ const Navigation = () => {
               </div> */}
             </div>
             <div class="contact-me">
-              <a href="#contact">Contact Me</a>
+                <NavLink to="/" onClick={handleContactClick}>Contact Me</NavLink>
             </div>
+
+            {/* <div class="contact-me">
+              <a href="#contact">Contact Me</a>
+            </div> */}
             <div class="social-media">
               <div class="social-links">
                   <div class="gap"></div>
