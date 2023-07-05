@@ -59,7 +59,7 @@
 .about-me-text {
   padding: 1rem;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
   @media only screen and (min-width: $break-m) {
     //margin-left: 12rem;
     //width: calc(100% - 14rem);
@@ -72,6 +72,16 @@
 }
 }
 
+#about-me-text-h4 {
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.about-me-icons {
+  max-width: 700px;
+  margin: auto;
+}
+
 .icons-container {
   display: flex;
   justify-content: center;
@@ -81,6 +91,7 @@
 
 .icons-container h4 {
   margin-top: 10px;
+  text-align: center;
 }
 
 .about-me-links {
@@ -105,26 +116,42 @@
 .html-icon,
 .css-icon,
 .axure-icon,
-.js-icon{
+.js-icon,
+.jquery-icon,
+.sql-icon,
+.php-icon,
+.wordpress-icon,
+.react-icon {
   content: "";
-    background-color: $green-brand;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: relative;
-    color: #21244a;
-    transition: 0.2s ease all;
-    cursor: default;
-    margin: 7px;
+  background-color: $green-brand;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  color: #21244a;
+  transition: 0.2s ease all;
+  cursor: default;
+  margin: 7px;
+  transform: scale(.8);
+  @media only screen and (min-width: $break-l) {
+    transform: scale(1);
+}
 }
 
-.axure-icon img {
+.axure-icon img,
+.jquery-icon img {
   width: 50%;
 }
+
 .sass-icon:hover,
 .html-icon:hover,
 .css-icon:hover,
 .axure-icon:hover,
-.js-icon:hover {
+.js-icon:hover,
+.jquery-icon:hover,
+.sql-icon:hover,
+.php-icon:hover,
+.wordpress-icon:hover,
+.react-icon:hover {
   transform: scale(1.2);
  }
