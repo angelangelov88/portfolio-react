@@ -41,7 +41,7 @@ const Projects = () => {
       title: 'Vue Films App',
       image: vueFilms,
       link: 'https://vue-films.angelov.uk/',
-      github: 'http://vue-films.angel-angelov.netmatters-scs.co.uk/',
+      github: 'https://github.com/angelangelov88/Vue-Films-App',
       description: 'This was my first Vue project. I created a films app using the Movie Database API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the movies and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the movies to the user\'s screen. I created the app for a mobile view only.',
     }, 
     {
@@ -88,7 +88,7 @@ const Projects = () => {
       id: 10,
       title: 'Axure Prototype',
       image: axure,
-      link: 'https://axure.angelov.uk/',
+      link: 'https://axure-project.angelov.uk/',
       github: 'https://github.com/angelangelov88/axure',
       description: 'This was my first Axure project. I created a prototype using Axure. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user\'s screen. I created the app for a mobile view only.',
     },
@@ -96,7 +96,7 @@ const Projects = () => {
       id: 11,
       title: 'Website Landing Page',
       image: pinpoint,
-      link: 'https://pinpoint.angelov.uk/',
+      link: 'https://angelangelov88.github.io/pinpoint-task/',
       github: 'https://github.com/angelangelov88/pinpoint-task',
       description: 'This was my first Pinpoint project. I created a landing page using Pinpoint. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user\'s screen. I created the app for a mobile view only.',
     }

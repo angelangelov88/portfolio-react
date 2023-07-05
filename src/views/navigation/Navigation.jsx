@@ -64,9 +64,9 @@ const Navigation = () => {
           </nav>
 
     {/* Small hamburger style navbar for small screens */}
-    <div className="blocker" onclick="closeNav()"></div>
+    <div className="blocker" onClick="closeNav()"></div>
     
-          <div className="hamburger" onclick="openNav()">
+          <div className="hamburger" onClick="openNav()">
               <div id="menu-lines">
                 <div className="menu-line"></div>
                 <div className="menu-line"></div>
