@@ -9,6 +9,8 @@
 }
   @media only screen and (min-width: $break-xxl) {
     max-width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 }
 
@@ -63,47 +65,6 @@
 }
 }
 
-//Adjusting the images of the project, so that they look good
-.photo-reflection {
-  position: relative;
-  left: 0;
-  @media only screen and (min-width: $break-l) {
-    left: -7rem;
-}
-}
-
-.photo-axure {
-  position: relative;
-  left: 0;
-  @media only screen and (min-width: $break-l) {
-    left: -236px;
-}
-  @media only screen and (min-width: $break-xl) {
-    left: -8rem;
-}
-}
-
-.photo-portfolio {
-  position: relative;  
-  left: 0;
-  @media only screen and (min-width: $break-l) {
-    left: -158px;
-}
-  @media only screen and (min-width: $break-xl) {
-    left: -7rem;
-}
-}
-
-.photo-reflection-js {
-  position: relative;
-  left: 0;
-  @media only screen and (min-width: $break-l) {
-    left: -119px;
-}
-  @media only screen and (min-width: $break-xl) {
-    left: -4.5rem;
-}
-}
 
 
 .project-title{
@@ -122,7 +83,7 @@
   @media only screen and (min-width: $break-m) {
     font-size: 1.3rem;
     padding-left: 0;
-    margin-left: 0.3rem;
+    margin-left: 1rem;
     //margin: 1rem;
 }
   @media only screen and (min-width: $break-xl) {
@@ -136,7 +97,7 @@
 
 .project-title:hover {
   text-decoration: underline;
-  color: lighten($color: $green-brand, $amount: 10);
+  color: darken($color: $green-brand, $amount: 10);
 }
 
 //Button View Project
@@ -148,7 +109,7 @@
   position: absolute;
   left: 1rem;
   top: 23rem;
-  color: black;
+  color: $green-brand;
   @media only screen and (min-width: $break-l) {
     display: block;
 }
@@ -158,7 +119,8 @@
 }
 
 .project-details:hover {
-  color: lighten($color: #000000, $amount: 50);
+  color: darken($color: $green-brand, $amount: 10);
+  text-decoration: underline;
 }
 
 
@@ -169,14 +131,67 @@
   @media only screen and (min-width: $break-m) {
     width: 600px;
     height: 300px;
+    transition: 0.4s ease-in-out;
 }
 }
 
 .photo-project:hover {
   @media only screen and (min-width: $break-l) {
   transform: scale(1.1);
-  opacity: .7;
-  transition: 0.4s;
+
+}
+}
+
+//Adjusting the images of the project, so that they look good
+// .photo-reflection {
+//   position: relative;
+//   left: 0;
+//   @media only screen and (min-width: $break-l) {
+//     left: -7rem;
+// }
+// }
+
+// .photo-axure {
+//   position: relative;
+//   left: 0;
+//   @media only screen and (min-width: $break-l) {
+//     left: -236px;
+// }
+//   @media only screen and (min-width: $break-xl) {
+//     left: -8rem;
+// }
+// }
+
+// .photo-portfolio {
+//   position: relative;  
+//   left: 0;
+//   @media only screen and (min-width: $break-l) {
+//     left: -158px;
+// }
+//   @media only screen and (min-width: $break-xl) {
+//     left: -7rem;
+// }
+// }
+
+// .photo-reflection-js {
+//   position: relative;
+//   left: 0;
+//   @media only screen and (min-width: $break-l) {
+//     left: -119px;
+// }
+//   @media only screen and (min-width: $break-xl) {
+//     left: -4.5rem;
+// }
+// }
+
+.photo-pinpoint {
+  position: relative;
+  left: 0;
+  @media only screen and (min-width: $break-l) {
+    left: -7rem;
+}
+  @media only screen and (min-width: $break-xl) {
+    left: -8rem;
 }
 }
 
@@ -220,16 +235,20 @@
   border: 2px $green-brand solid;
   overflow-y: auto;
   position: absolute;    
-  bottom: 57px;
+  bottom: 16%;
+  width: 95%;
+  height: auto;
+  max-height: 83%;
+
   @media only screen and (min-width: $break-m) {
     bottom: 17%;
-    width: 94%;
+    width: 95%;
     height: auto;
-    max-height: 72%;
+    max-height: 82%;
 }
   @media only screen and (min-width: $break-l) {
     width: 90%;
-    bottom: 28%;
+    bottom: 17%;
 }
   @media only screen and (min-width: $break-xl) {
     width: 92%;
@@ -238,4 +257,19 @@
 
 .shown {
   display: block;
+}
+
+.text-holder::-webkit-scrollbar {
+  width: 20px;
+}
+
+.text-holder::-webkit-scrollbar-track {
+  background-color: ccc;
+  opacity: 0.5;
+  border-radius: 100px;
+}
+
+.text-holder::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 100px;
 }
