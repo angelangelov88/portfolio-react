@@ -51,14 +51,14 @@ const Navigation = () => {
                 <a className="linkedin" href="https://www.linkedin.com/in/ang-angelov/" target="_blank" rel="noreferrer">
                   <i className="fab fa-linkedin-in social-logo"></i>
                 </a>
-                  <div className="gap"></div>
+                  {/* <div className="gap"></div>
                   <a className="facebook" href="https://www.facebook.com/ang.angelov88" target="_blank" rel="noreferrer">
                     <i className="fab fa-facebook-f social-logo"></i>
                   </a>
                     <div className="gap"></div>
                   <a className="twitter" href="https://twitter.com/Angel69010637" target="_blank" rel="noreferrer">
                     <i className="fab fa-twitter social-logo"></i>
-                  </a>
+                  </a> */}
               </div>
             </div>
           </nav>

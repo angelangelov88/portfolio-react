@@ -198,10 +198,13 @@
 
 .social-links {
   display: flex;
+  justify-content: left;
+  gap: 10px;
   margin-top: 1rem;
+  padding-right: 15px;
   padding-left: 4px;
   @media only screen and (min-width: $break-m) {  
-  padding-left: 24px;
+  padding-left: 18px;
 }
 }
 
