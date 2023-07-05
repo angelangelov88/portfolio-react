@@ -1,4 +1,5 @@
 import '../../style/style.scss';
+import Contact from '../contact/Contact';
 import Projects from '../projects/Projects';
 import Typewriter from '../typewriter/Typewriter';
 
@@ -151,21 +152,11 @@ function emailValidationFunction() {
 
 // document.getElementById("submit").addEventListener("click", emailValidationFunction);
 
+
   return (
     <>
-    {/* // <!-- Font Awesome -->
-        // <script src="https://kit.fontawesome.com/ebb02e5adb.js" crossorigin="anonymous"></script>
-        
-    // <!-- CSS -->
-        // <link rel="stylesheet" href="style/style.css">
-        
-    // <!-- Poppins font -->
-        // <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-    // <!-- Favicon -->
-        // <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/> */}
      {/* Beginning of the main content. I have added content div to wrap everything up */}
-        <div class="content">
+        <div className="content">
     
     {/* <!-- Hero image and text part --> */}
           <div class="hero-image">
@@ -178,63 +169,24 @@ function emailValidationFunction() {
               />
             </div>
     {/* <!-- Scroll down text and arrow --> */}
-            <div class="scroll">
-              <a href="#portfolio-link" class="scroll-down-arrow">
-              Scroll Down
-                <br />
-                <i class="fas fa-chevron-down" />
-              </a>
+            <div className="scroll">
+              <div className="scroll-down-arrow" onClick={() => document.getElementById('portfolio-link').scrollIntoView({ behavior: 'smooth' })}>
+                Scroll Down
+                  <i className="fas fa-chevron-down" />
+              </div>
             </div>
           </div>
       
       <Projects />
-    {/* <!-- Contact form container. I have added second container for the purpose of styling and in order to make sure that it works on all screen sizes--> */}
-          <div id="contact" class="contact">
-            <div class="contact-2">
-    
-    {/* <!-- Get in touch part --> */}
-              <div class="get-in-touch">
-                <div class="get-in-touch-2">
-                  <h2>Get In Touch</h2>
-                  <ul class="contact-ul">
-                    <li>Interested in working together? Fill out the form below with your details or contact me with any questions you may have.</li>
-                    <li class="phone"><a href="tel:07553692967">07553692967</a></li>
-                    <li class="phone"><a href="mailto:ang.angelov88@gmail.com">ang.angelov88@gmail.com</a></li>
-                    <li>I'll get back to you as soon as I can. That's a promise!</li> 
-                  </ul>
-                </div>
-              </div>
-    
-    {/* <!-- Actual contact form with the fields and placeholders--> */}
-              <form class="contact-form">
-                <div class="contact-form-2">
-                  <input id="fname" type="text" required="required" placeholder="First Name*" />
-                  <input id="lname" type="text" required="required" placeholder="Last Name*" />
-                  <input id="email" type="email" required="required" placeholder="Email Address*" />
-                  <label id="error-message">Make sure you type a valid email address!</label>
-                  <input id="subject" type="text" required="required" placeholder="Subject*" />
-                  <textarea id="message" type="text" placeholder="Your text here..." />
-                  <input id="submit" type="submit" value="Submit" />
-                </div>
-              </form>
-            </div>
-          </div>
-    
+      <Contact />
     {/* <!--Scroll up button  --> */}
-          <div class="scroll-up">
-            <a href="index.html" class="scroll-up-text">
+          <div className="scroll-up scroll-up-text" onClick={() => document.getElementsByClassName('content')[0].scrollIntoView({ behavior: 'smooth' })}>
             <i class="fas fa-chevron-up"></i>
             <br />
             Back To Top
-            </a>
           </div>
         </div>  
-    
-        {/* <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-        <script src="js/core.js"></script>
-        <script src="js/index-page.js"></script>
-        <script src="js/main.js"></script> */}
-    </>
+        </>
       );
 }
 

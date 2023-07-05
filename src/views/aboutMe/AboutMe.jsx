@@ -45,6 +45,14 @@ function AboutMe() {
 							<h4>CSS</h4>
 						</div>
 					</div>
+					<div className="jquery-container">
+						<div className="jquery-icon">
+							<img src={tailwindIcon} className="logo-icon" alt="jquery-logo" />
+						</div>
+						<div className="icon-text">
+							<h4>tailwind</h4>
+						</div>
+					</div>
 					<div className="html-container">
 						<div className="sass-icon">
 							<i className="fab fa-sass logo-icon "></i>
@@ -53,7 +61,6 @@ function AboutMe() {
 							<h4>SASS</h4>
 						</div>
 					</div>
-
 					<div className="js-container">
 						<div className="js-icon">
 							<i className="fab fa-js-square logo-icon"></i>
@@ -98,14 +105,6 @@ function AboutMe() {
 						</div>
 					</div>
 
-					<div className="sql-container">
-						<div className="sql-icon">
-							<i className="fas fa-database logo-icon"></i>
-						</div>
-						<div className="icon-text">
-							<h4>SQL</h4>
-						</div>
-					</div>
 
 					<div className="php-container">
 						<div className="php-icon">
@@ -124,6 +123,14 @@ function AboutMe() {
 							<h4>Wordpress</h4>
 						</div>
 					</div>
+					<div className="sql-container">
+						<div className="sql-icon">
+							<i className="fas fa-database logo-icon"></i>
+						</div>
+						<div className="icon-text">
+							<h4>SQL</h4>
+						</div>
+					</div>
 					<div className="wordpress-container">
 						<div className="wordpress-icon">
 							<i className="fab fa-aws logo-icon"></i>
@@ -140,15 +147,6 @@ function AboutMe() {
 							<h4>GraphQL</h4>
 						</div>
 					</div>
-					<div className="jquery-container">
-						<div className="jquery-icon">
-							<img src={tailwindIcon} className="logo-icon" alt="jquery-logo" />
-						</div>
-						<div className="icon-text">
-							<h4>tailwind</h4>
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
