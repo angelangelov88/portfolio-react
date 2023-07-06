@@ -9,6 +9,7 @@ import reactHolidays from '../../images/react-holidays.PNG'
 import wordpress from '../../images/wordpress.PNG'
 import woocommerce from '../../images/woocommerce3.PNG'
 import pinpoint from '../../images/pinpoint.PNG'
+import MoreInfoButton from './MoreInfoButton';
 
 const Projects = () => {
   const projects = [
@@ -116,9 +117,7 @@ const Projects = () => {
         <a href={project.github} target="_blank" className="project-details" rel="noreferrer" >View Project Files
           <i className="fas fa-arrow-circle-right"></i>
         </a>
-        
-        <button className="btn-project more-info-btn-1">More Info...</button>
-        <div className="text-holder">{project.description}</div>   
+        <MoreInfoButton project={project} />
       </div>
     ))}
         {/* <!-- Project 1 - Netmatters reflection --> */}
