@@ -18,12 +18,12 @@ function AboutMe() {
         <div className="about-me-text">
           <p>
             My name is Angel and I am a Cambridge based software developer. I started my web development journey in February 2021 after a Covid related redundancy. I have completed an intensive software development course with Netmatters. After that I landed my first job as a Junior Software Developer at Legalesign. I am currently working with JavaScript/TypeScript and React. I am also learning AWS and GraphQL. I have worked with HTML and CSS (SASS and Tailwind), jQuery, SQL and PHP.
-            <h2>Netmatter&apos;s Software Development Course</h2>
-            My first project was to clone the
-            {" "}
-            <a href="http://reflection.angel-angelov.netmatters-scs.co.uk/" className="about-me-links" target="_blank" rel="noreferrer">Netmatters&apos; website</a>
-            . I have done that at stages using the skills I&apos;ve just learnt. First I started with the HTML and CSS. I made sure the website is responsive and I used mobile first approach. Once I learnt Vanilla JavaScript, I added some features such as sticky header, hamburger menu, hero image slider, etc. At the end I added the PHP part which was to create a new Contact page with a contact form. I used PHP and SQL to get the user input and add it to a database. I also made all my pages PHP instead of HTML in order to re-use some elements such as header, footer and navbar. I used PHP to fetch data from the database and add the newscards on the page.
           </p>
+          <h2>Netmatter&apos;s Software Development Course</h2>
+          My first project was to clone the
+          {" "}
+          <a href="http://reflection.angel-angelov.netmatters-scs.co.uk/" className="about-me-links" target="_blank" rel="noreferrer">Netmatters&apos; website</a>
+          . I have done that at stages using the skills I&apos;ve just learnt. First I started with the HTML and CSS. I made sure the website is responsive and I used mobile first approach. Once I learnt Vanilla JavaScript, I added some features such as sticky header, hamburger menu, hero image slider, etc. At the end I added the PHP part which was to create a new Contact page with a contact form. I used PHP and SQL to get the user input and add it to a database. I also made all my pages PHP instead of HTML in order to re-use some elements such as header, footer and navbar. I used PHP to fetch data from the database and add the newscards on the page.
           <p>After that I have worked on projects using JavaScript, React, Vue, PHP and WordPress. All my projects can be seen on</p>
           <Link to="/" className="about-me-links">
             <h4 className="about-me-text-h4">My Portfolio Page</h4>

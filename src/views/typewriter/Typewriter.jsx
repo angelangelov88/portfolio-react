@@ -23,7 +23,7 @@ function Typewriter({ text, text2, delay }) {
 
       return () => clearTimeout(timeout);
     }
-    return null;
+    return () => {};
   }, [currentIndex, delay, text, currentIndex2, text2]);
 
   return (
