@@ -1,21 +1,25 @@
 import React from "react";
 
-const MoreInfoButton = ({ project }) => {
+function MoreInfoButton({ project }) {
   const [moreInfoShown, setMoreInfoShown] = React.useState(null);
 
-  return ( 
+  return (
     <>
-
-    <button className="btn-project more-info-btn-1" onClick={() => {
-        setMoreInfoShown(!moreInfoShown);
-        console.log(moreInfoShown)
-    }}>{!moreInfoShown ? 'More Info...' : 'Close'}</button>
-    {moreInfoShown && (
-    <div className="text-holder">{project.description}</div>   
+      <button
+        className="btn-project more-info-btn-1"
+        onClick={() => {
+          setMoreInfoShown(!moreInfoShown);
+          console.log(moreInfoShown);
+        }}
+      >
+        {!moreInfoShown ? "More Info..." : "Close"}
+      </button>
+      {moreInfoShown && (
+        <div className="text-holder">{project.description}</div>
       )}
     </>
 
-   );
+  );
 }
- 
+
 export default MoreInfoButton;
