@@ -18,7 +18,6 @@ function MoreInfoButton({ project }) {
         <div className="text-holder">{project.description}</div>
       )}
     </>
-
   );
 }
 

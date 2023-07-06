@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -65,14 +67,12 @@ function Navigation() {
       </nav>
 
       {/* Small hamburger style navbar for small screens */}
-      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         className="blocker"
         // onClick={closeNav()}
         // onKeyDown={closeNav()}
       />
 
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
       <div className="hamburger" onClick="openNav()">
         <div id="menu-lines">
           <div className="menu-line" />
