@@ -73,7 +73,10 @@ function Navigation() {
         // onKeyDown={closeNav()}
       />
 
-      <div className="hamburger" onClick="openNav()">
+      <div
+        className="hamburger"
+        // onClick={openNav()}
+      >
         <div id="menu-lines">
           <div className="menu-line" />
           <div className="menu-line" />
