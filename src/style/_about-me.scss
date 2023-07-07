@@ -1,6 +1,6 @@
 //Image on top of the page container
 .about-me-image-container {
-  background-image: url(../images/about-me-image.jpg);
+  background-image: url(../images/about.jpg);
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 }
 
 .gradient-div-about-me {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   position: absolute;
   width: 100%;
   height: inherit;

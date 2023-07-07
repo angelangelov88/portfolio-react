@@ -1,13 +1,13 @@
 //NAVBAR container - not visible for screens smaller than M
 .navbar {
-  display: inline-block;
+  // display: inline-block;
   position: fixed;
   background-color: white;
   z-index: 1;
   height: 100vh;
   width: 170px;
   @media only screen and (min-width: $break-m) {
-    display: block;
+    display: block !important;
     position: fixed;
     top: -55px;
     left: -32px;
@@ -198,10 +198,13 @@
 
 .social-links {
   display: flex;
+  justify-content: left;
+  gap: 10px;
   margin-top: 1rem;
+  padding-right: 15px;
   padding-left: 4px;
   @media only screen and (min-width: $break-m) {  
-  padding-left: 24px;
+  padding-left: 18px;
 }
 }
 
@@ -223,12 +226,13 @@
 
 //Added this div to make it fill the space when sidebar is open so that user can click on it (or anywhere) to close the sidebar
 .blocker {
-  display: none;
+  // display: none;
   position: fixed;
   top: 0;
   left: 170px;
   bottom: 0;
   right: -260px;
   background-color: rgba(0, 0, 0, 0.6);
-  //border: 5px yellow solid;
+  z-index: 100;
+  // border: 5px yellow solid;
 }
