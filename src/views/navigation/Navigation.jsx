@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -18,11 +16,11 @@ function Navigation() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const windowWidth = useRef(window.innerWidth);
 
-  // const toggleNavBar = () => {
-  //   if (windowWidth?.current < 768) {
-  //     setNavbarOpen(!navbarOpen);
-  //   }
-  // };
+  const toggleNavBar = () => {
+    if (windowWidth?.current < 768) {
+      setNavbarOpen(!navbarOpen);
+    }
+  };
 
   // Effect to set navbarOpen to false when user resizes screen
   React.useEffect(() => {
@@ -96,25 +94,26 @@ function Navigation() {
       </nav>
 
       {/* Small hamburger style navbar for small screens */}
+      {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <div
         className="blocker"
-        style={{
-          display: navbarOpen ? "block" : "none",
-          // display: "block",
-        }}
-        // onClick={toggleNavBar}
-        // onKeyDown={toggleNavBar}
+        style={{ display: navbarOpen ? "block" : "none" }}
+        onClick={toggleNavBar}
+        onKeyDown={toggleNavBar}
+        role="button"
+        tabIndex={0}
       />
 
       <div
         className="hamburger"
         style={{
-          // display: "block",
           display: windowWidth < 768 && navbarOpen ? "block" : windowWidth < 768 && !navbarOpen ? "none" : windowWidth > 768 && "block",
           cursor: "pointer",
         }}
-        // onClick={openNav}
-        // onClick={toggleNavBar}
+        onClick={toggleNavBar}
+        onKeyDown={toggleNavBar}
+        role="button"
+        tabIndex={0}
       >
         <div id="menu-lines">
           <div className="menu-line" />
