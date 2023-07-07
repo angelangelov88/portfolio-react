@@ -39,13 +39,7 @@ function Navigation() {
       {/* // <!-- SIDE NAVBAR for screens over M--> */}
       <nav
         className="navbar"
-        style={{
-          // display:
-          // windowWidth < 768 && navbarOpen ? "block"
-          //   : windowWidth < 768 && !navbarOpen ? "none"
-          //     : windowWidth > 768 && "block"
-          display: navbarOpen ? "block" : "none",
-        }}
+        style={{ display: navbarOpen ? "block" : "none", }}
       >
         <div className="logo">
           <NavLink to="/">A</NavLink>
@@ -97,7 +91,7 @@ function Navigation() {
       {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <div
         className="blocker"
-        style={{ display: navbarOpen ? "block" : "none" }}
+        style={{ display: navbarOpen ? "block" : "none", }}
         onClick={toggleNavBar}
         onKeyDown={toggleNavBar}
         role="button"

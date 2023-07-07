@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Error() {
   return (
-    <div style={{ "margin-left": "20%" }}>
+    <div style={{ marginLeft: "20%" }}>
       <h2>Error 404</h2>
       <h2>Page not found</h2>
       <h3>
