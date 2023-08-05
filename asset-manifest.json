@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/angelov.uk/static/css/main.6d610034.css",
-    "main.js": "/angelov.uk/static/js/main.101f8876.js",
+    "main.js": "/angelov.uk/static/js/main.7f109753.js",
     "static/media/coding-examples.jpg": "/angelov.uk/static/media/coding-examples.1625fb8d396f2e7f2cad.jpg",
     "static/media/pinpoint.PNG": "/angelov.uk/static/media/pinpoint.5da19e6beeabe70a0752.PNG",
     "static/media/about.jpg": "/angelov.uk/static/media/about.43d6b13ccafeca84de26.jpg",
@@ -21,10 +21,10 @@
     "static/media/graphql.png": "/angelov.uk/static/media/graphql.009e74d7d411bee8d2c2.png",
     "index.html": "/angelov.uk/index.html",
     "main.6d610034.css.map": "/angelov.uk/static/css/main.6d610034.css.map",
-    "main.101f8876.js.map": "/angelov.uk/static/js/main.101f8876.js.map"
+    "main.7f109753.js.map": "/angelov.uk/static/js/main.7f109753.js.map"
   },
   "entrypoints": [
     "static/css/main.6d610034.css",
-    "static/js/main.101f8876.js"
+    "static/js/main.7f109753.js"
   ]
 }
