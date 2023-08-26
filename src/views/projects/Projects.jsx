@@ -5,10 +5,10 @@ import imageAssigner from "../../images/image-assigner-task.PNG";
 import bakery from "../../images/bakers-dozen.PNG";
 import weather from "../../images/react-weather.PNG";
 import vueFilms from "../../images/vue-films-poster.PNG";
-import contact from "../../images/contact.PNG";
+// import contact from "../../images/contact.PNG";
 import reactHolidays from "../../images/react-holidays.PNG";
-import wordpress from "../../images/wordpress.PNG";
-import woocommerce from "../../images/woocommerce3.PNG";
+// import wordpress from "../../images/wordpress.PNG";
+// import woocommerce from "../../images/woocommerce3.PNG";
 import pinpoint from "../../images/pinpoint.PNG";
 import MoreInfoButton from "./MoreInfoButton";
 
@@ -46,14 +46,14 @@ function Projects() {
       github: "https://github.com/angelangelov88/Vue-Films-App",
       description: "This was my first Vue project. I created a films app using the Movie Database API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the movies and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the movies to the user's screen. I created the app for a mobile view only.",
     },
-    {
-      id: 5,
-      title: "Contact Form",
-      image: contact,
-      link: "https://contact-form.angelov.uk/",
-      github: "https://github.com/angelangelov88/reflection/tree/php-reflection",
-      description: "This was my first PHP project. I created a contact form using PHP. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the movies and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the movies to the user's screen. I created the app for a mobile view only.",
-    },
+    // {
+    //   id: 5,
+    //   title: "Contact Form",
+    //   image: contact,
+    //   link: "https://contact-form.angelov.uk/",
+    //   github: "https://github.com/angelangelov88/reflection/tree/php-reflection",
+    //   description: "This was my first PHP project. I created a contact form using PHP. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the movies and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the movies to the user's screen. I created the app for a mobile view only.",
+    // },
     {
       id: 6,
       title: "React Holidays App",
@@ -70,22 +70,22 @@ function Projects() {
       github: "https://github.com/angelangelov88/JavaScript-Reflection-Task2",
       description: "This was my second JavaScript project. I created an image assigner using JavaScript. I used an array of images and a function to assign a random image to the user. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
     },
-    {
-      id: 8,
-      title: "Wordpress Travel Website",
-      image: wordpress,
-      link: "https://wordpress.angelov.uk/",
-      github: "https://github.com/angelangelov88/wordpress",
-      description: "This was my first WordPress project. I created a travel website using WordPress. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
-    },
-    {
-      id: 9,
-      title: "WooCommerce Website",
-      image: woocommerce,
-      link: "https://woocommerce.angelov.uk/",
-      github: "https://github.com/angelangelov88/Woocommerce",
-      description: "This was my first WooCommerce project. I created a WooCommerce website using WordPress. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
-    },
+    // {
+    //   id: 8,
+    //   title: "Wordpress Travel Website",
+    //   image: wordpress,
+    //   link: "https://wordpress.angelov.uk/",
+    //   github: "https://github.com/angelangelov88/wordpress",
+    //   description: "This was my first WordPress project. I created a travel website using WordPress. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
+    // },
+    // {
+    //   id: 9,
+    //   title: "WooCommerce Website",
+    //   image: woocommerce,
+    //   link: "https://woocommerce.angelov.uk/",
+    //   github: "https://github.com/angelangelov88/Woocommerce",
+    //   description: "This was my first WooCommerce project. I created a WooCommerce website using WordPress. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
+    // },
     {
       id: 10,
       title: "Axure Prototype",
