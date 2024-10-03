@@ -18,7 +18,7 @@ function Projects() {
       id: 1,
       title: "Netmatters Reflection",
       image: reflection,
-      link: "https://netmatters.angelov.uk/",
+      link: "https://reflection.angelov.uk/",
       github: "https://github.com/angelangelov88/reflection/tree/php-reflection",
       description: "My first project was to replicate the website of Netmatters. I started the project from scratch and had to add the HTML and CSS in order to make the website look identical to the actual one. I used my knowledge of HTML and CSS (including SASS) to implement the task. After this initial setup I had to update the website twice. I added JavaScript to make it interactive. In my JavaScript update I added functions such as hamburger menu, side navigation bar, hero image slider, sticky header and cookies. Once I completed my PHP studies I added PHP functionality to the website by adding a new contact page with a contact form and map API. The contact form is validated by client-side validation - HTML5, JavaScript and server-side validation - PHP. I also added a database connection for the submitted form. In the main page I created a database and connected it to the news cards. I pull the data from the database and show it to the user. I have added a SQL statement that allows random news to be pulled from the database and shown to the user."
     },
