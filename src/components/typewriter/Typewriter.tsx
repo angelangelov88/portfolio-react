@@ -1,33 +1,13 @@
-import { useState, useEffect } from "react";
+import useTypewriter from "./useTypewriter";
 
 const Typewriter = ({ text, text2, delay }: { text: string; text2: string; delay: number }) => {
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentText2, setCurrentText2] = useState("");
-  const [currentIndex2, setCurrentIndex2] = useState(0);
-
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setCurrentText((prevText) => prevText + text[currentIndex]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, delay);
-      return () => clearTimeout(timeout);
-    }
-    if (currentIndex2 < text2.length) {
-      const timeout = setTimeout(() => {
-        setCurrentText2((prevText) => prevText + text2[currentIndex2]);
-        setCurrentIndex2((prevIndex) => prevIndex + 1);
-      }, delay);
-      return () => clearTimeout(timeout);
-    }
-    return () => {};
-  }, [currentIndex, delay, text, currentIndex2, text2]);
+  const line1 = useTypewriter(text, delay, true);
+  const line2 = useTypewriter(text2, delay, line1 === text);
 
   return (
     <>
-      <h1>{currentText}</h1>
-      <h2>{currentText2}</h2>
+      <h1>{line1}</h1>
+      <h2>{line2}</h2>
     </>
   );
 };

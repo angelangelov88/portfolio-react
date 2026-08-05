@@ -1,0 +1,57 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+
+  @media only screen and (min-width: $break-m) {
+    margin-left: 12rem;
+  }
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  color: $green-brand;
+  opacity: 0.15;
+  margin-bottom: -1rem;
+
+  @media only screen and (min-width: $break-m) {
+    font-size: 12rem;
+  }
+}
+
+.error-title {
+  font-size: 2rem;
+  color: $navy;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.error-home-btn {
+  background-color: $green-brand;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: color.adjust($green-brand, $lightness: -10%);
+  }
+}

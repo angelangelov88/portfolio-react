@@ -21,7 +21,7 @@ const Projects = () => {
             <MoreInfoButton
               project={project}
               isOpen={openId === project.id}
-              onOpen={() => setOpenId(openId === project.id ? null : project.id)}
+              onOpen={() => setOpenId(project.id)}
               onClose={() => setOpenId(null)}
             />
           </div>

@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     description: "This was my first Vue project. I created a films app using the Movie Database API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the movies and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the movies to the user's screen. I created the app for a mobile view only.",
   },
   {
-    id: 6,
+    id: 5,
     title: "React Holidays App",
     image: reactHolidays,
     link: "https://react-holidays.angelov.uk/",
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     description: "This was my third React project. I created a holidays app using the Holiday API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the holidays and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the holidays to the user's screen. I created the app for a mobile view only.",
   },
   {
-    id: 7,
+    id: 6,
     title: "JavaScript Image Assigner",
     image: imageAssigner,
     link: "https://js-image-assigner.angelov.uk/",
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
     description: "This was my second JavaScript project. I created an image assigner using JavaScript. I used an array of images and a function to assign a random image to the user. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
   },
   {
-    id: 10,
+    id: 7,
     title: "Axure Prototype",
     image: axure,
     link: "https://axure-project.angelov.uk/",
@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
     description: "This was my first Axure project. I created a prototype using Axure. I used a theme and added the content to the website. I also added a function to determine the date and render it to the screen. Last but not least I rendered the image to the user's screen. I created the app for a mobile view only.",
   },
   {
-    id: 11,
+    id: 8,
     title: "Website Landing Page",
     image: pinpoint,
     link: "https://angelangelov88.github.io/pinpoint-task/",

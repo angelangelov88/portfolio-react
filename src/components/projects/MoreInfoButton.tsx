@@ -13,14 +13,14 @@ const MoreInfoButton = ({ project, isOpen, onOpen, onClose }: Props) => (
       <a href={project.github} target="_blank" rel="noreferrer" className="project-details">
         <i className="fab fa-github" /> View Files
       </a>
-      <button className="btn-project" onClick={onOpen}>
+      <button type="button" className="btn-project" onClick={onOpen}>
         More Info
       </button>
     </div>
     {isOpen && (
       <div className="text-holder">
         <div className="text-holder-close">
-          <button onClick={onClose}>×</button>
+          <button type="button" onClick={onClose}>×</button>
         </div>
         <p>{project.description}</p>
       </div>
