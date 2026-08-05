@@ -1,0 +1,217 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.projects-container {
+  padding: 2rem 1rem;
+
+  @media only screen and (min-width: $break-m) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  @media only screen and (min-width: $break-xxl) {
+    max-width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.gradient-div-brand {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+
+  &:hover:not(:has(.text-holder)) {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+  }
+
+  @media only screen and (min-width: $break-m) {
+    width: 580px;
+    margin: 0.75rem;
+  }
+
+  @media only screen and (min-width: $break-l) {
+    width: 340px;
+  }
+
+  @media only screen and (min-width: $break-xl) {
+    width: 420px;
+  }
+
+  @media only screen and (min-width: $break-xxl) {
+    width: 400px;
+  }
+}
+
+.project-image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.img-container {
+  overflow: hidden;
+  height: 200px;
+
+  @media only screen and (min-width: $break-m) {
+    height: 220px;
+  }
+}
+
+.photo-project {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+
+  .project:hover:not(:has(.text-holder)) & {
+    transform: scale(1.05);
+  }
+}
+
+.project-body {
+  padding: 1rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.project-title {
+  color: #21244a;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  display: block;
+
+  &:hover {
+    color: $green-brand;
+  }
+}
+
+.project-more-info {
+  margin-top: auto;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: $green-brand;
+  }
+}
+
+.btn-project {
+  background-color: $green-brand;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: color.adjust($green-brand, $lightness: -10%);
+  }
+}
+
+.text-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(76, 175, 80, 0.96);
+  color: white;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  overflow-y: auto;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+
+  p {
+    padding: 0 1.2rem 1.2rem;
+    margin: 0;
+  }
+}
+
+.text-holder-close {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: rgba(76, 175, 80, 0.96);
+  z-index: 3;
+
+  button {
+    all: unset;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.shown {
+  display: block;
+}

@@ -1,4 +1,4 @@
-//Mixins
+@use 'variables' as *;
 
 @mixin text-holder {
   display: none;
@@ -8,19 +8,22 @@
   padding: 0 1rem;
   border: 2px $green-brand solid;
   overflow-y: auto;
-  position: absolute;    
+  position: absolute;
   bottom: 57px;
+
   @media only screen and (min-width: $break-m) {
     bottom: 17%;
     width: 94%;
     height: auto;
     max-height: 72%;
-}
+  }
+
   @media only screen and (min-width: $break-l) {
     width: 90%;
     bottom: 28%;
-}
+  }
+
   @media only screen and (min-width: $break-xl) {
     width: 92%;
-}
+  }
 }

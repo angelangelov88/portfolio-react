@@ -2,6 +2,11 @@ import "../style/style.scss";
 import Projects from "../components/projects/Projects";
 import Typewriter from "../components/typewriter/Typewriter";
 
+const scrollToProjects = () => {
+  const el = document.getElementById("portfolio-link");
+  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: "smooth" });
+};
+
 const Portfolio = () => (
   <div className="content">
     <div className="hero-image">
@@ -16,8 +21,8 @@ const Portfolio = () => (
       <div className="scroll">
         <div
           className="scroll-down-arrow"
-          onClick={() => (document.getElementById("portfolio-link") as HTMLElement).scrollIntoView({ behavior: "smooth" })}
-          onKeyDown={() => (document.getElementById("portfolio-link") as HTMLElement).scrollIntoView({ behavior: "smooth" })}
+          onClick={scrollToProjects}
+          onKeyDown={scrollToProjects}
           role="button"
           tabIndex={0}
         >
@@ -29,8 +34,8 @@ const Portfolio = () => (
     <Projects />
     <div
       className="scroll-up scroll-up-text"
-      onClick={() => (document.getElementsByClassName("content")[0] as HTMLElement).scrollIntoView({ behavior: "smooth" })}
-      onKeyDown={() => (document.getElementsByClassName("content")[0] as HTMLElement).scrollIntoView({ behavior: "smooth" })}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      onKeyDown={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       role="button"
       tabIndex={0}
     >

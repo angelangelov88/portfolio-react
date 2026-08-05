@@ -1,25 +1,22 @@
-@import "mixins";
-@import "variables";
-@import "header"; 
-@import "projects";
-@import "mixins";
-@import "contact";
-@import "navbar";
-@import "about-me";
-@import "coding-examples";
-@import "scs-scheme.scss";
+@use 'variables' as *;
+@use 'mixins';
+@use 'header';
+@use 'projects';
+@use 'contact';
+@use 'navbar';
+@use 'about-me';
+@use 'coding-examples';
 
 body {
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Helvetica", "Arial", sans-serif;
-  letter-spacing: .4px;  
-  margin: 0; //Code for the hero image to appear to the edges
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  letter-spacing: 0.4px;
+  margin: 0;
 }
 
-//I decided to use margin to a container I added to wrap all the content in order to avoid using relative positioning
 .content {
   @media only screen and (min-width: $break-m) {
     margin-left: 12rem;
-}
+  }
 }

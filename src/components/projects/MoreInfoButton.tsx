@@ -1,22 +1,31 @@
-import { useState } from "react";
 import { Project } from "../../types/project";
 
-const MoreInfoButton = ({ project }: { project: Project }) => {
-  const [moreInfoShown, setMoreInfoShown] = useState(false);
-
-  return (
-    <>
-      <button
-        className="btn-project more-info-btn-1"
-        onClick={() => setMoreInfoShown(!moreInfoShown)}
-      >
-        {moreInfoShown ? "Close" : "More Info..."}
-      </button>
-      {moreInfoShown && (
-        <div className="text-holder">{project.description}</div>
-      )}
-    </>
-  );
+type Props = {
+  project: Project;
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
 };
+
+const MoreInfoButton = ({ project, isOpen, onOpen, onClose }: Props) => (
+  <>
+    <div className="project-actions">
+      <a href={project.github} target="_blank" rel="noreferrer" className="project-details">
+        <i className="fab fa-github" /> View Files
+      </a>
+      <button className="btn-project" onClick={onOpen}>
+        More Info
+      </button>
+    </div>
+    {isOpen && (
+      <div className="text-holder">
+        <div className="text-holder-close">
+          <button onClick={onClose}>×</button>
+        </div>
+        <p>{project.description}</p>
+      </div>
+    )}
+  </>
+);
 
 export default MoreInfoButton;

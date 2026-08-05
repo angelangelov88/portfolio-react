@@ -1,5 +1,7 @@
+@use 'variables' as *;
+
 .contact-page {
-  min-height: calc(100vh - 0px);
+  min-height: 100vh;
 }
 
 .contact-hero {
@@ -13,24 +15,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media only screen and (min-width: $break-m) {
     left: 12rem;
     width: calc(100% - 12rem);
   }
-}
 
-.contact-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
 
-.contact-hero h1 {
-  color: white;
-  position: relative;
-  z-index: 1;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+  h1 {
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
 }
 
 .contact-body {
@@ -40,11 +43,13 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+
   @media only screen and (min-width: $break-m) {
     padding: 3rem 4rem;
     margin-left: 12rem;
     width: calc(100% - 12rem);
   }
+
   @media only screen and (min-width: $break-l) {
     padding: 3rem 8rem;
   }
@@ -65,9 +70,11 @@
   gap: 1.2rem;
   width: 100%;
   max-width: 900px;
+
   @media only screen and (min-width: $break-s) {
     grid-template-columns: 1fr 1fr;
   }
+
   @media only screen and (min-width: $break-xl) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -83,7 +90,7 @@
   border: 2px solid #e8e8e8;
   border-radius: 12px;
   text-decoration: none;
-  color: #21244a;
+  color: $navy;
   transition: all 0.2s ease;
   background: #fff;
 
@@ -91,32 +98,32 @@
     border-color: $green-brand;
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(76, 175, 80, 0.15);
-    color: #21244a;
+    color: $navy;
 
     .contact-card-icon {
       color: $green-brand;
     }
   }
-}
 
-.contact-card-icon {
-  font-size: 2rem;
-  color: #bbb;
-  transition: color 0.2s ease;
-}
+  &-icon {
+    font-size: 2rem;
+    color: #bbb;
+    transition: color 0.2s ease;
+  }
 
-.contact-card-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #999;
-}
+  &-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+  }
 
-.contact-card-value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-align: center;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  &-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }
