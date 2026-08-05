@@ -38,9 +38,13 @@
   top: 0%;
   z-index: 101;
   margin: 10px;
-  @media only screen and (min-width: $break-m) {
+  cursor: pointer;
+  &--open {
     display: none;
-}
+  }
+  @media only screen and (min-width: $break-m) {
+    display: none !important;
+  }
 }
 
 #menu-lines {
@@ -183,6 +187,10 @@
 
 .scs:hover {
   border-bottom: 2px $green-brand solid;
+}
+
+.contact-me .active {
+  color: $green-brand;
 }
 
 .contact-me {

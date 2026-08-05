@@ -2,37 +2,23 @@ import { useRef, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
-  const handlePortfolioClick = () => {
-    const element = document.getElementById("portfolio-link");
-    if (element) { element.scrollIntoView({ behavior: "smooth" }); }
-  };
-
-  const handleContactClick = () => {
-    const element = document.getElementById("contact");
-    if (element) { element.scrollIntoView({ behavior: "smooth" }); }
-  };
-
   const [navbarOpen, setNavbarOpen] = useState(false);
   const windowWidth = useRef<number>(window.innerWidth);
+  const isSmallScreen = () => windowWidth.current < 768;
+  const closeNav = () => isSmallScreen() && setNavbarOpen(false);
 
   const toggleNavBar = () => {
-    if (windowWidth.current < 768) {
-      setNavbarOpen(!navbarOpen);
-    }
+    if (windowWidth.current < 768) setNavbarOpen(!navbarOpen);
   };
 
   useEffect(() => {
     const handleResize = () => {
       windowWidth.current = window.innerWidth;
-      if (windowWidth.current > 768) {
-        setNavbarOpen(false);
-      }
+      if (windowWidth.current > 768) setNavbarOpen(false);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const isSmallScreen = windowWidth.current < 768;
 
   return (
     <header>
@@ -45,14 +31,14 @@ const Navigation = () => {
         </div>
         <div className="navbar-items">
           <div className="about-me">
-            <NavLink to="/about-me">About Me</NavLink>
+            <NavLink to="/about-me" onClick={closeNav}>About Me</NavLink>
           </div>
           <div className="my-portfolio">
-            <NavLink to="./#portfolio-link" onClick={handlePortfolioClick}>My Portfolio</NavLink>
+            <NavLink to="/" onClick={closeNav}>My Portfolio</NavLink>
           </div>
         </div>
         <div className="contact-me">
-          <NavLink to="/" onClick={handleContactClick}>Contact Me</NavLink>
+          <NavLink to="/contact" onClick={closeNav}>Contact Me</NavLink>
         </div>
         <div className="social-media">
           <div className="social-links">
@@ -78,11 +64,7 @@ const Navigation = () => {
       />
 
       <div
-        className="hamburger"
-        style={{
-          display: isSmallScreen && navbarOpen ? "block" : isSmallScreen && !navbarOpen ? "none" : "block",
-          cursor: "pointer",
-        }}
+        className={`hamburger${navbarOpen ? " hamburger--open" : ""}`}
         onClick={toggleNavBar}
         onKeyDown={toggleNavBar}
         role="button"

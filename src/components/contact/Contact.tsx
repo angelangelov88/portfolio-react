@@ -1,37 +1,43 @@
-
 const Contact = () => (
-    <div id="contact" className="contact">
-      {/* <!-- Contact form container. I have added second container for the purpose of styling and in order to make sure that it works on all screen sizes--> */}
-      <div className="contact-2">
+  <div id="contact" className="contact-page">
+    <div className="contact-hero">
+      <div className="contact-hero-overlay" />
+      <h1>Get In Touch</h1>
+    </div>
 
-        {/* <!-- Get in touch part --> */}
-        <div className="get-in-touch">
-          <div className="get-in-touch-2">
-            <h2>Get In Touch</h2>
-            <ul className="contact-ul">
-              {/* <li>Interested in working together? Fill out the form below with your details or contact me with any questions you may have.</li> */}
-              <li>Interested in working together? Contact me with any questions you may have.</li>
-              <li className="phone"><a href="tel:07553692967">07553692967</a></li>
-              <li className="phone"><a href="mailto:ang.angelov88@gmail.com">ang.angelov88@gmail.com</a></li>
-              <li>I&apos;ll get back to you as soon as I can. That&apos;s a promise!</li>
-            </ul>
-          </div>
-        </div>
+    <div className="contact-body">
+      <p className="contact-intro">
+        Interested in working together or have a question? I'd love to hear from you.
+        Reach out via any of the options below and I'll get back to you as soon as I can.
+      </p>
 
-        {/* <!-- Actual contact form with the fields and placeholders--> */}
-        {/* <form className="contact-form">
-        <div className="contact-form-2">
-          <input id="fname" type="text" required="required" placeholder="First Name*" />
-          <input id="lname" type="text" required="required" placeholder="Last Name*" />
-          <input id="email" type="email" required="required" placeholder="Email Address*" />
-          <label id="error-message">Make sure you type a valid email address!</label>
-          <input id="subject" type="text" required="required" placeholder="Subject*" />
-          <textarea id="message" type="text" placeholder="Your text here..." />
-          <input id="submit" type="submit" value="Submit" />
-        </div>
-      </form> */}
+      <div className="contact-cards">
+        <a href="tel:07553692967" className="contact-card">
+          <i className="fas fa-phone contact-card-icon" />
+          <span className="contact-card-label">Phone</span>
+          <span className="contact-card-value">07553 692 967</span>
+        </a>
+
+        <a href="mailto:ang.angelov88@gmail.com" className="contact-card">
+          <i className="fas fa-envelope contact-card-icon" />
+          <span className="contact-card-label">Email</span>
+          <span className="contact-card-value">ang.angelov88@gmail.com</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ang-angelov/" target="_blank" rel="noreferrer" className="contact-card">
+          <i className="fab fa-linkedin-in contact-card-icon" />
+          <span className="contact-card-label">LinkedIn</span>
+          <span className="contact-card-value">ang-angelov</span>
+        </a>
+
+        <a href="https://github.com/angelangelov88" target="_blank" rel="noreferrer" className="contact-card">
+          <i className="fab fa-github contact-card-icon" />
+          <span className="contact-card-label">GitHub</span>
+          <span className="contact-card-value">angelangelov88</span>
+        </a>
       </div>
     </div>
+  </div>
 );
 
 export default Contact;
