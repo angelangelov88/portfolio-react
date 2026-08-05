@@ -1,7 +1,7 @@
-import "../../style/style.scss";
-import Contact from "../contact/Contact";
-import Projects from "../projects/Projects";
-import Typewriter from "../typewriter/Typewriter";
+import "../style/style.scss";
+import Contact from "../components/contact/Contact";
+import Projects from "../components/projects/Projects";
+import Typewriter from "../components/typewriter/Typewriter";
 
 const Portfolio = () => (
   <>

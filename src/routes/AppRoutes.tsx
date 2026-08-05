@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Navigation from "../views/navigation/Navigation";
-import Portfolio from "../views/portfolio/Portfolio";
-import AboutMe from "../views/aboutMe/AboutMe";
-import Error from "../views/error/Error";
+import Navigation from "../components/navigation/Navigation";
+import Portfolio from "../pages/Portfolio";
+import AboutMe from "../pages/AboutMe";
+import Error from "../pages/Error";
 
 const AppRoutes = () => (
   <>
