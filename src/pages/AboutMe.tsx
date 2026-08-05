@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import jqueryImage from "../images/jquery.png";
-import tailwindIcon from "../images/tailwind.png";
-import grapfQLIcon from "../images/graphql.png";
+import { SKILLS } from "../data/skills";
 
 const AboutMe = () => (
   <>
@@ -12,20 +10,68 @@ const AboutMe = () => (
     <div id="about-me-text-container">
       <div className="about-me-text">
         <p>
-          My name is Angel and I am a Cambridge based software developer. I started my web development journey in February 2021 after a Covid related redundancy. I have completed an intensive software development course with Netmatters. After that I landed my first job as a Junior Software Developer at Legalesign. I am currently working with JavaScript/TypeScript and React. I am also learning AWS and GraphQL. I have worked with HTML and CSS (SASS and Tailwind), jQuery, SQL and PHP.
+          I&apos;m a Frontend Engineer based in Huntingdon, UK, with 4 years of experience at Legalesign — a secure enterprise eSignature platform. I specialise in React, TypeScript and GraphQL, with a track record of architecting high-performance applications from prototype to production. I&apos;m a strategic decision-maker who saved 2–3 months in development costs through smart architectural choices.
         </p>
-        <h2>Netmatter&apos;s Software Development Course</h2>
-        My first project was to clone the
-        {" "}
-        <a href="http://reflection.angel-angelov.netmatters-scs.co.uk/" className="about-me-links" target="_blank" rel="noreferrer">Netmatters&apos; website</a>
-        . I have done that at stages using the skills I&apos;ve just learnt. First I started with the HTML and CSS. I made sure the website is responsive and I used mobile first approach. Once I learnt Vanilla JavaScript, I added some features such as sticky header, hamburger menu, hero image slider, etc. At the end I added the PHP part which was to create a new Contact page with a contact form. I used PHP and SQL to get the user input and add it to a database. I also made all my pages PHP instead of HTML in order to re-use some elements such as header, footer and navbar. I used PHP to fetch data from the database and add the newscards on the page.
-        <p>After that I have worked on projects using JavaScript, React, Vue, PHP and WordPress. All my projects can be seen on</p>
-        <Link to="/" className="about-me-links">
-          <h4 className="about-me-text-h4">My Portfolio Page</h4>
-        </Link>
-        <h2>Junior Software Developer</h2>
-        As a junior software developer at Legalesign, my role involve working with the React framework to develop and maintain software solutions for the company&apos;s platform. We have created a new application using React and TypeScript. I work closely with designers and other developers to ensure the best user experience and functionality. We use Figma for the design and GitHub for version control. I have also been working with GraphQL and AWS.
-        <br />
+
+        <p>
+          I started my web development journey in February 2021 after a Covid-related redundancy, completing an intensive software development course with Netmatters. I landed my first role as a Junior Software Developer at Legalesign, where I have grown into a Frontend Engineer over the past 4 years. I have worked with React, TypeScript, GraphQL, AWS, HTML, CSS (SASS and Tailwind), REST API.
+        </p>
+        <p>
+          When I&apos;m not coding I&apos;m most probably watching football or out for a walk in the nature with my dog. I also love travelling and exploring the world and new cultures.
+        </p>
+
+        <h2>Professional Experience</h2>
+
+        <h3>Frontend Engineer — Legalesign <span>(April 2022 – Present)</span></h3>
+        <p>
+          At Legalesign I have worked across multiple products and taken on increasing responsibility over time.
+        </p>
+        <ul>
+          <li>
+            <strong>Signing Application:</strong> Acted as Lead Developer for an embedded signing component, enabling customers to integrate Legalesign directly into their platforms. Recommended and implemented a React core wrapped in Stencil.js, leveraging team expertise to save 2–3 months of development costs.
+          </li>
+          <li>
+            <strong>Customer Console:</strong> Developed the flagship customer-facing admin panel for preparing and tracking critical document lifecycles. Translated complex Figma wireframes into pixel-perfect, responsive interfaces using Tailwind CSS.
+          </li>
+          <li>
+            <strong>Component &amp; Widget Library:</strong> Built a comprehensive in-house library of reusable components and widgets using Stencil.js, TypeScript and Storybook. Automated deployment to NPM and implemented unit testing across the suite.
+          </li>
+          <li>
+            <strong>CI/CD &amp; QA:</strong> Engineered robust CI/CD pipelines for all applications, automating version bumping and ensuring tests are part of the PR process. Led the adoption of Cypress across the company for E2E testing of mission-critical signing workflows.
+          </li>
+          <li>
+            <strong>AI Productivity:</strong> Integrated Amazon Q and Claude to refactor legacy code and increase sprint velocity.
+          </li>
+          <li>
+            <strong>Legacy Modernisation:</strong> Built a standalone analytics reporting tool, and engineered dedicated applications for internal support and high-concurrency enterprise distribution.
+          </li>
+        </ul>
+
+        <h3>Partnerships Specialist — Booking.com <span>(2015 – 2020)</span></h3>
+        <ul>
+          <li>Managed high-value commercial relationships and led partner negotiation cycles.</li>
+          <li>Worked on projects to improve partner visibility, analyse performance and present platform tools to partners.</li>
+          <li>Recognised as one of the best performers, delivering excellent partner satisfaction.</li>
+        </ul>
+
+        <h3>Operations Manager — Menzies Hotels <span>(2014 – 2015)</span></h3>
+        <ul>
+          <li>Managed a team of 5 to deliver exceptional customer service.</li>
+          <li>Worked closely with department heads and the General Manager on budgets, revenue proposals and forecasting.</li>
+        </ul>
+
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Scion Coalition Scheme</strong> — Intensive 40-hour/week developer training programme</li>
+          <li><strong>Robert Gordon University</strong> — MSc in International Tourism and Hospitality Management</li>
+          <li><strong>Sofia University</strong> — BA in Geography</li>
+        </ul>
+
+        <p>
+          All my projects can be seen on{" "}
+          <Link to="/" className="about-me-links">My Portfolio Page</Link>
+        </p>
+
         <p id="myCv">
           <a href="/Angel_Angelov_CV.pdf" target="_blank" rel="noreferrer" download="Angel_Angelov_CV.pdf">
             Download CV
@@ -39,73 +85,20 @@ const AboutMe = () => (
             <i className="fas fa-external-link-alt" />
           </a>
         </p>
-        <br />
-        <p>
-          I have started my journey quite recently but have gained invaluable knowledge and experience in a short period of time. I am interested to continue learning and improving my skills. After obtaining a degree in International Tourism Management and working for more than 5 years in the travel and tourism industry, I got the opportunity to start something new. I started this course in order to turn my career to a new direction. I have always been quite interested in technology and have been fixing friends and family computers since I was a kid.
-        </p>
-        When I am not coding I will most probably be watching football or go for a walk in the nature with my dog. I also love traveling and exploring the World and new cultures and places.
+
+        <h2>Technical Skills</h2>
         <div className="about-me-icons">
           <div className="icons-container">
-            <div className="html-container">
-              <div className="html-icon"><i className="fab fa-html5 logo-icon" /></div>
-              <div className="icon-text"><h4>HTML</h4></div>
-            </div>
-            <div className="css-container">
-              <div className="css-icon"><i className="fab fa-css3-alt logo-icon" /></div>
-              <div className="icon-text"><h4>CSS</h4></div>
-            </div>
-            <div className="jquery-container">
-              <div className="jquery-icon"><img src={tailwindIcon} className="logo-icon" alt="tailwind-logo" /></div>
-              <div className="icon-text"><h4>Tailwind</h4></div>
-            </div>
-            <div className="html-container">
-              <div className="sass-icon"><i className="fab fa-sass logo-icon" /></div>
-              <div className="icon-text"><h4>SASS</h4></div>
-            </div>
-            <div className="js-container">
-              <div className="js-icon"><i className="fab fa-js-square logo-icon" /></div>
-              <div className="icon-text"><h4>JavaScript</h4></div>
-            </div>
-            <div className="react-container">
-              <div className="react-icon"><i className="fab fa-react logo-icon" /></div>
-              <div className="icon-text"><h4>React</h4></div>
-            </div>
-            <div className="react-container">
-              <div className="react-icon"><i className="fab fa-brands fa-github logo-icon" /></div>
-              <div className="icon-text"><h4>GitHub</h4></div>
-            </div>
-            <div className="react-container">
-              <div className="react-icon"><i className="fab fa-vuejs logo-icon" /></div>
-              <div className="icon-text"><h4>Vue</h4></div>
-            </div>
-            <div className="react-container">
-              <div className="react-icon"><i className="fab fa-brands fa-node logo-icon" /></div>
-              <div className="icon-text"><h4>Node.js</h4></div>
-            </div>
-            <div className="jquery-container">
-              <div className="jquery-icon"><img src={jqueryImage} className="logo-icon" alt="jquery-logo" /></div>
-              <div className="icon-text"><h4>jQuery</h4></div>
-            </div>
-            <div className="php-container">
-              <div className="php-icon"><i className="fab fa-php logo-icon" /></div>
-              <div className="icon-text"><h4>PHP</h4></div>
-            </div>
-            <div className="wordpress-container">
-              <div className="wordpress-icon"><i className="fab fa-wordpress logo-icon" /></div>
-              <div className="icon-text"><h4>Wordpress</h4></div>
-            </div>
-            <div className="sql-container">
-              <div className="sql-icon"><i className="fas fa-database logo-icon" /></div>
-              <div className="icon-text"><h4>SQL</h4></div>
-            </div>
-            <div className="wordpress-container">
-              <div className="wordpress-icon"><i className="fab fa-aws logo-icon" /></div>
-              <div className="icon-text"><h4>AWS</h4></div>
-            </div>
-            <div className="jquery-container">
-              <div className="jquery-icon"><img src={grapfQLIcon} className="logo-icon" alt="graphql-logo" /></div>
-              <div className="icon-text"><h4>GraphQL</h4></div>
-            </div>
+            {SKILLS.map(({ label, faClass, image }) => (
+              <div key={label} className="react-container">
+                <div className="react-icon">
+                  {faClass
+                    ? <i className={`${faClass} logo-icon`} />
+                    : <img src={image} className="logo-icon" alt={`${label}-logo`} />}
+                </div>
+                <div className="icon-text"><h4>{label}</h4></div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
