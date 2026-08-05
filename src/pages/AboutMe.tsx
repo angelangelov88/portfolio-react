@@ -27,11 +27,17 @@ const AboutMe = () => (
         As a junior software developer at Legalesign, my role involve working with the React framework to develop and maintain software solutions for the company&apos;s platform. We have created a new application using React and TypeScript. I work closely with designers and other developers to ensure the best user experience and functionality. We use Figma for the design and GitHub for version control. I have also been working with GraphQL and AWS.
         <br />
         <p id="myCv">
-          <Link to="/CV-AngelAngelov-2023.pdf" target="_blank" download>
-            Download My CV
+          <a href="/Angel_Angelov_CV.pdf" target="_blank" rel="noreferrer" download="Angel_Angelov_CV.pdf">
+            Download CV
             {" "}
-            <i className="fas fa-file-pdf fa-5x" />
-          </Link>
+            <i className="fas fa-file-download" />
+          </a>
+          <br />
+          <a href="/Angel_Angelov_CV.pdf" target="_blank" rel="noreferrer">
+            View CV
+            {" "}
+            <i className="fas fa-external-link-alt" />
+          </a>
         </p>
         <br />
         <p>
