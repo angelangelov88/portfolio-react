@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Angel Angelov — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website built with React, TypeScript, and Vite.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **React 19** with TypeScript
+- **Vite** — build tool and dev server
+- **React Router v7** — client-side routing with `BrowserRouter`
+- **SASS** — modular styling with `@use`
+- **ESLint** with `eslint-config-airbnb`
+- **Vercel** — deployment
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── components/
+│   ├── contact/        # Contact component
+│   ├── navigation/     # Navbar and hamburger menu
+│   ├── projects/       # Project cards and More Info overlay
+│   └── typewriter/     # Typewriter animation
+├── data/               # Static data (projects, skills)
+├── images/             # Image assets
+├── pages/              # Page-level components (Portfolio, AboutMe, Contact)
+├── routes/             # Route definitions
+├── style/              # SASS partials
+└── types/              # TypeScript types
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Requires [pnpm](https://pnpm.io/) installed globally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install -g pnpm
+```
 
-### `npm run build`
+Install dependencies and start the dev server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+pnpm install
+pnpm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts
 
-### `npm run eject`
+| Command | Description |
+|---|---|
+| `pnpm start` | Start dev server |
+| `pnpm build` | Build for production (outputs to `dist/`) |
+| `pnpm preview` | Preview production build locally |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deployed to [Vercel](https://vercel.com). The `vercel.json` config sets the output directory to `dist` and rewrites all routes to `index.html` for client-side routing.
