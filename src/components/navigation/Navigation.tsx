@@ -43,11 +43,11 @@ const Navigation = () => {
         <div className="social-media">
           <div className="social-links">
             <div className="gap" />
-            <a className="github" href="https://github.com/angelangelov88" target="_blank" rel="noreferrer">
+            <a className="github" href="https://github.com/angelangelov88" target="_blank" rel="noreferrer" aria-label="Visit Github profile">
               <i className="fab fa-github social-logo" />
             </a>
             <div className="gap" />
-            <a className="linkedin" href="https://www.linkedin.com/in/ang-angelov/" target="_blank" rel="noreferrer">
+            <a className="linkedin" href="https://www.linkedin.com/in/ang-angelov/" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile">
               <i className="fab fa-linkedin-in social-logo" />
             </a>
           </div>
@@ -61,6 +61,7 @@ const Navigation = () => {
         onKeyDown={toggleNavBar}
         role="button"
         tabIndex={0}
+        aria-label="Close navigation"
       />
 
       <div
@@ -69,6 +70,8 @@ const Navigation = () => {
         onKeyDown={toggleNavBar}
         role="button"
         tabIndex={0}
+        aria-label="Toggle navigation"
+        aria-expanded={navbarOpen}
       >
         <div id="menu-lines">
           <div className="menu-line" />
