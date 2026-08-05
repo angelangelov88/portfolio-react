@@ -1,7 +1,5 @@
-import React from "react";
 
-function Contact() {
-  return (
+const Contact = () => (
     <div id="contact" className="contact">
       {/* <!-- Contact form container. I have added second container for the purpose of styling and in order to make sure that it works on all screen sizes--> */}
       <div className="contact-2">
@@ -34,7 +32,6 @@ function Contact() {
       </form> */}
       </div>
     </div>
-  );
-}
+);
 
 export default Contact;

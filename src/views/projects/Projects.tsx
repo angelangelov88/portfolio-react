@@ -1,4 +1,3 @@
-import React from "react";
 import reflection from "../../images/netmatters-reflection2.png";
 import axure from "../../images/axure-prototype2.png";
 import imageAssigner from "../../images/image-assigner-task.PNG";
@@ -12,7 +11,7 @@ import reactHolidays from "../../images/react-holidays.PNG";
 import pinpoint from "../../images/pinpoint.PNG";
 import MoreInfoButton from "./MoreInfoButton";
 
-function Projects() {
+const Projects = () => {
   const projects = [
     {
       id: 1,
@@ -124,6 +123,6 @@ function Projects() {
       ))}
     </div>
   );
-}
+};
 
 export default Projects;

@@ -1,13 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import jqueryImage from "../../images/jquery.png";
 import tailwindIcon from "../../images/tailwind.png";
 import grapfQLIcon from "../../images/graphql.png";
 
-function AboutMe() {
-  const element = document.getElementById("portfolio-link");
-  if (element) { element.scrollIntoView({ behavior: "smooth" }); }
-
+const AboutMe = () => {
   return (
     <>
       <div className="about-me-image-container">
@@ -181,7 +177,7 @@ function AboutMe() {
       </div>
     </>
 
-  );
-}
+);
+};
 
 export default AboutMe;

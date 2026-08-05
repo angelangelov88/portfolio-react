@@ -1,16 +1,22 @@
 import React from "react";
 
-function MoreInfoButton({ project }) {
-  const [moreInfoShown, setMoreInfoShown] = React.useState(null);
+type Project = {
+  id: number;
+  title: string;
+  image: string;
+  link: string;
+  github: string;
+  description: string;
+};
+
+const MoreInfoButton = ({ project }: { project: Project }) => {
+  const [moreInfoShown, setMoreInfoShown] = React.useState(false);
 
   return (
     <>
       <button
         className="btn-project more-info-btn-1"
-        onClick={() => {
-          setMoreInfoShown(!moreInfoShown);
-          console.log(moreInfoShown);
-        }}
+        onClick={() => setMoreInfoShown(!moreInfoShown)}
       >
         {!moreInfoShown ? "More Info..." : "Close"}
       </button>
@@ -19,6 +25,6 @@ function MoreInfoButton({ project }) {
       )}
     </>
   );
-}
+};
 
 export default MoreInfoButton;

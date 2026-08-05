@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function Typewriter({ text, text2, delay }) {
+const Typewriter = ({ text, text2, delay }: { text: string; text2: string; delay: number }) => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText2, setCurrentText2] = useState("");
@@ -12,7 +12,6 @@ function Typewriter({ text, text2, delay }) {
         setCurrentText((prevText) => prevText + text[currentIndex]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
       }, delay);
-
       return () => clearTimeout(timeout);
     }
     if (currentIndex2 < text2.length) {
@@ -20,7 +19,6 @@ function Typewriter({ text, text2, delay }) {
         setCurrentText2((prevText) => prevText + text2[currentIndex2]);
         setCurrentIndex2((prevIndex) => prevIndex + 1);
       }, delay);
-
       return () => clearTimeout(timeout);
     }
     return () => {};
@@ -32,6 +30,6 @@ function Typewriter({ text, text2, delay }) {
       <h2>{currentText2}</h2>
     </>
   );
-}
+};
 
 export default Typewriter;
