@@ -10,9 +10,16 @@ type Props = {
 const MoreInfoButton = ({ project, isOpen, onOpen, onClose }: Props) => (
   <>
     <div className="project-actions">
-      <a href={project.github} target="_blank" rel="noreferrer" className="project-details">
-        <i className="fab fa-github" /> View Files
-      </a>
+      {project.npm && (
+        <a href={project.npm} target="_blank" rel="noreferrer" className="project-details">
+          <i className="fab fa-npm" /> NPM Package
+        </a>
+      )}
+      {project.github && (
+        <a href={project.github} target="_blank" rel="noreferrer" className="project-details">
+          <i className="fab fa-github" /> View Files
+        </a>
+      )}
       <button type="button" className="btn-project" onClick={onOpen}>
         More Info
       </button>

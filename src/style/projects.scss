@@ -1,6 +1,10 @@
 @use 'sass:color';
 @use 'variables' as *;
 
+.projects-section-title {
+  padding-left: 2rem;
+}
+
 .projects-container {
   padding: 2rem 1rem;
 
