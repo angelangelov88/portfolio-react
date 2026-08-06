@@ -20,6 +20,11 @@ const MoreInfoButton = ({ project, isOpen, onOpen, onClose }: Props) => (
           <i className="fab fa-github" /> View Files
         </a>
       )}
+      {!project.npm && !project.github && (
+        <span className="project-requires-login">
+          <i className="fas fa-lock" /> Requires Login
+        </span>
+      )}
       <button type="button" className="btn-project" onClick={onOpen}>
         More Info
       </button>

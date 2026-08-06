@@ -3,6 +3,16 @@
 
 .projects-section-title {
   padding-left: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $navy;
+  border-left: 4px solid $green-brand;
+
+  &:first-child {
+    margin-top: 1rem;
+  }
 }
 
 .projects-container {
@@ -112,6 +122,15 @@
 
 .project-more-info {
   margin-top: auto;
+}
+
+.project-requires-login {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .project-actions {

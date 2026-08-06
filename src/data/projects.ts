@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
     image: signer,
     npm: "https://www.npmjs.com/package/legalesign-signer",
     description:
-      "A framework-agnostic electronic document signing component I built as lead developer. Architected as a three-layer system: a Stencil web component wrapper, a React 19 + TypeScript UI layer, and a framework-agnostic business logic layer using Zustand stores. Published to npm as both a web component (legalesign-signer) and a React package. Supports 17 languages via i18next, custom colour theming via CSS custom properties, and a rich event API (signingSuccess, signingFail, fieldChange). Also available via CDN with latest and pinned version support. I wrote a comprehensive Cypress e2e test suite covering all field types (signature, initials, date, checkbox, text, dropdown, file, email, number, regex), signing workflows (single signer, witness, approver, reject), auto-forward ordering, accessibility (WCAG), and responsive layouts (mobile and tablet). GitHub Actions automate build checks on every PR, run the full Cypress suite, handle npm publishing with automated version bumps, trigger Amplify preview deployments for PRs, and dispatch rebuild events to the testing app on merge.",
+      "A framework-agnostic electronic document signing component I built as lead developer. Architected as a three-layer system: a Stencil web component wrapper, a React 19 + TypeScript UI layer, and a framework-agnostic business logic layer using Zustand stores. React users can install it as an npm package (legalesign-signer), while web component users load it directly from a CDN hosted on AWS. Supports 17 languages via i18next, custom colour theming via CSS custom properties, and a rich event API (signingSuccess, signingFail, fieldChange). I wrote a comprehensive Cypress e2e test suite covering all field types (signature, initials, date, checkbox, text, dropdown, file, email, number, regex), signing workflows (single signer, witness, approver, reject) and auto-forward ordering. GitHub Actions automate build checks on every PR, run the full Cypress suite, trigger Amplify preview deployments for PRs, and dispatch rebuild events to the testing app on merge. npm publishing is fully automated — on merge to main, the version is bumped (patch/minor/major based on PR title convention), the package is built and published to npm, and the version bump is committed back to the repo, all via GitHub Actions.",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     link: "https://ui.legalesign.io",
     npm: "https://www.npmjs.com/package/legalesign-ui",
     description:
-      "A Stencil-based UI component library I built as lead developer, used across all Legalesign products. Published to npm as legalesign-ui (web component) and legalesign-ui-react (React wrapper), kept in sync at the same version. Built with Stencil and TypeScript, with Storybook for component development and documentation. GitHub Actions automate version bumping (patch/minor/major based on PR title), building both packages, publishing to npm via OIDC trusted publishing, and committing the version bump back to main.",
+      "A Stencil-based UI component library I built as lead developer, used across all Legalesign products. Published to npm as legalesign-ui (web component) and legalesign-ui-react (React wrapper), kept in sync at the same version. Built with Stencil and TypeScript, with Storybook for component development and documentation. npm publishing is fully automated via GitHub Actions — on merge to main, both packages are versioned in sync (patch/minor/major based on PR title), built, and published to npm using OIDC trusted publishing (no npm token required), with the version bump committed back to main.",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     image: documentViewer,
     npm: "https://www.npmjs.com/package/legalesign-document-viewer",
     description:
-      "A Stencil web component for editing, previewing and composing document signing templates, embeddable in any framework via npm. I was part of a team of three developers. Supports editor, compose and preview modes, recipient configuration, field type filtering, custom toolbar slots, and a full event API (update, validate, selectFields). Includes i18n with 17 languages and an AWS Translate sync script to keep all translation files in sync. GitHub Actions handle npm publishing with automated version bumps, PR preview deployments to Amplify, and rebuild triggers to the testing app.",
+      "A Stencil web component for editing, previewing and composing document signing templates, embeddable in any framework via npm. I was part of a team of three developers. Supports editor, compose and preview modes, recipient configuration, field type filtering, custom toolbar slots, and a full event API (update, validate, selectFields). Includes i18n with 17 languages and an AWS Translate sync script to keep all translation files in sync. npm publishing is fully automated via GitHub Actions using OIDC trusted publishing — on merge to prod, the version is bumped based on PR title, both the web component and React wrapper packages are built and published in sync, and the version bump is committed back to the repo. GitHub Actions also handle PR preview deployments to Amplify and rebuild triggers to the testing app.",
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     title: "Legalesign Bulk Send",
     image: bulk,
     description:
-      "A web app for sending documents to multiple recipients at once, built with React, TypeScript, and Vite. I was part of a team of three developers, built using the shared microsite template I created. Deployed to AWS Amplify. Available at console.legalesign.com (requires Legalesign account).",
+      "A web app for sending documents to multiple recipients at once, built with React, TypeScript, and Vite. I was part of a team of three developers, built using the shared microsite template I created. Deployed to AWS Amplify. Available at bulksend.legalesign.com (requires Legalesign account).",
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     link: "https://reflection.angelov.uk/",
     github: "https://github.com/angelangelov88/reflection/tree/php-reflection",
     description:
-      "My first project was to replicate the website of Netmatters. I started the project from scratch and had to add the HTML and CSS in order to make the website look identical to the actual one. I used my knowledge of HTML and CSS (including SASS) to implement the task. After this initial setup I had to update the website twice. I added JavaScript to make it interactive. In my JavaScript update I added functions such as hamburger menu, side navigation bar, hero image slider, sticky header and cookies. Once I completed my PHP studies I added PHP functionality to the website by adding a new contact page with a contact form and map API. The contact form is validated by client-side validation - HTML5, JavaScript and server-side validation - PHP. I also added a database connection for the submitted form. In the main page I created a database and connected it to the news cards. I pull the data from the database and show it to the user. I have added a SQL statement that allows random news to be pulled from the database and shown to the user.",
+      "A full replication of the Netmatters website built from scratch. Started with HTML and CSS (SASS), then extended with JavaScript to add interactive features including a hamburger menu, side navigation, hero image slider, sticky header, and cookie banner. Later added PHP functionality with a contact form using both client-side (HTML5, JavaScript) and server-side (PHP) validation, a MySQL database connection for form submissions, and dynamic news cards pulling randomised content from a database.",
   },
   {
     id: 9,
@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
     link: "https://bakers-dozen.angelov.uk/",
     github: "https://github.com/donk3ylee/trifecta-perfecta",
     description:
-      "That was a project we had to do in a team. Three of us worked together to create a website for a local bakery. We had to create the website from scratch with an image as a guide for the design. We divided the index page in 3 parts and I was in charge of the header and footer. After that I created the About Us and Products pages. I used the knowledge I've gained throughout the course including but not limited to HTML, CSS, JavaScript. I was also in charge for the responsiveness of the website on different screen sizes as well as browser compatibility.",
+      "A team project to build a website for a local bakery from scratch using a design mockup as reference. I was responsible for the header, footer, About Us page, and Products page, as well as cross-browser compatibility and responsiveness across all screen sizes. Built with HTML, CSS, and JavaScript. We ran daily standups to stay aligned and I handled debugging across browsers and devices.",
   },
   {
     id: 10,
@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
     link: "https://react-weather.angelov.uk/",
     github: "https://github.com/angelangelov88/react-weather-app",
     description:
-      "This was my second React project. I created a weather app using openweathermap API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the weather constants and set them to an empty string. After that I added a fetch request to the API to request the data. I also added a function to determine the date and render it to the screen. Last but not least I rendered the city, country, temperature, feels like temperature and the weather to the user's screen.",
+      "A mobile-first weather app built with React, consuming the OpenWeatherMap API. Displays city, country, temperature, feels-like temperature, and weather conditions. API key is protected via dotenv and excluded from version control. Built using React hooks for state management and async fetch for data retrieval.",
   },
   {
     id: 11,
@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
     link: "https://vue-films.angelov.uk/",
     github: "https://github.com/angelangelov88/Vue-Films-App",
     description:
-      "This was my first Vue project. I created a films app using the Movie Database API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the movies and set them to an empty string. After that I added a fetch request to the API to request the data.",
+      "A mobile-first films app built with Vue.js, consuming The Movie Database API. Displays movie posters, titles, and release dates. My first Vue project — built to learn Vue's reactivity system and component model. API key protected via dotenv.",
   },
   {
     id: 12,
@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
     link: "https://react-holidays.angelov.uk/",
     github: "https://github.com/angelangelov88/react-holidays",
     description:
-      "This was my third React project. I created a holidays app using the Holiday API. I used dotenv to make sure the API KEY is hidden and added the .env to my .gitignore file. I added a state hook for the query and the holidays and set them to an empty string. After that I added a fetch request to the API to request the data.",
+      "A mobile-first public holidays app built with React, consuming the Holiday API. Lets users look up public holidays by country and year. Built using React hooks and async fetch, with the API key protected via dotenv.",
   },
   {
     id: 13,
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
     link: "https://js-image-assigner.angelov.uk/",
     github: "https://github.com/angelangelov88/JavaScript-Reflection-Task2",
     description:
-      "This was my second JavaScript project. I created an image assigner using JavaScript. I used an array of images and a function to assign a random image to the user.",
+      "A JavaScript app that randomly assigns images from a predefined array and displays them to the user. Built to practise DOM manipulation, array handling, and event-driven JavaScript without any frameworks.",
   },
   {
     id: 14,
@@ -144,7 +144,7 @@ export const PROJECTS: Project[] = [
     link: "https://axure-project.angelov.uk/",
     github: "https://github.com/angelangelov88/axure",
     description:
-      "This was my first Axure project. I created a prototype using Axure RP to design and demonstrate a website layout with interactive elements.",
+      "An interactive prototype built with Axure RP to design and demonstrate a website layout. Focused on UX flows, component states, and interactive wireframing before any code was written.",
   },
   {
     id: 15,
@@ -154,7 +154,7 @@ export const PROJECTS: Project[] = [
     link: "https://angelangelov88.github.io/pinpoint-task/",
     github: "https://github.com/angelangelov88/pinpoint-task",
     description:
-      "A responsive landing page built as a pixel-perfect implementation task, using HTML and CSS.",
+      "A pixel-perfect responsive landing page built from a design spec using HTML and CSS. Focused on accurate layout implementation, spacing, and typography matching across screen sizes.",
   },
 ];
 
