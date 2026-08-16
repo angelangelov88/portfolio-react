@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
     category: "personal",
     title: "React Weather App",
     image: weather,
-    link: "https://react-weather.angelov.uk/",
+    link: "https://weather.angelov.uk/",
     github: "https://github.com/angelangelov88/react-weather-app",
     description:
       "A mobile-first weather app built with React, consuming the OpenWeatherMap API. Displays city, country, temperature, feels-like temperature, and weather conditions. API key is protected via dotenv and excluded from version control. Built using React hooks for state management and async fetch for data retrieval.",
