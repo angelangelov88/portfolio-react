@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     category: "personal",
     title: "Vue Films App",
     image: vueFilms,
-    link: "https://vue-films.angelov.uk/",
+    link: "https://films.angelov.uk/",
     github: "https://github.com/angelangelov88/Vue-Films-App",
     description:
       "A mobile-first films app built with Vue.js, consuming The Movie Database API. Displays movie posters, titles, and release dates. My first Vue project — built to learn Vue's reactivity system and component model. API key protected via dotenv.",
