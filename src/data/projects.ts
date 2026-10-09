@@ -85,30 +85,10 @@ export const PROJECTS: Project[] = [
     link: "https://kelpwatt.angelov.uk/",
     github: "https://github.com/angelangelov88/kelpwatt-app",
     description:
-      "A full-stack web app that connects a Growatt solar/battery inverter to an Octopus Energy account. It shows the inverter's Battery First and Grid First charge slots next to Intelligent Octopus's planned dispatches, and can apply those times to the inverter by hand or automatically through the night via a scheduled GitHub Actions job. It also lists Octopus saving sessions and lets you join them. Built with React 18, TypeScript, Vite, Tailwind CSS, React Router 7, TanStack Query 5 and Zod, with a Vercel Node functions API backed by Supabase (auth and Postgres) and Resend for email. Security was a core focus: sessions live in httpOnly cookies with no API keys in the browser, data sits in a private Postgres schema with row-level security and a least-privilege role, users' Growatt and Octopus credentials are encrypted with AES-256-GCM, and sign-in supports Google, email confirmation and authenticator-app MFA. Anyone can sign up and connect their own accounts.",
+      "A full-stack web app that connects a Growatt solar/battery inverter to an Octopus Energy account. The dashboard shows the inverter's Battery First (charge) and Grid First (export) slots next to Intelligent Octopus's planned dispatches, and applies those times to the inverter by hand or automatically, checking every 5 minutes. You can export to the grid with one-tap presets or until the battery drops to a chosen level, and join Octopus saving sessions. There's also an activity log, light and dark themes, and data export and account deletion. Built with React 18, TypeScript, Vite, Tailwind CSS, React Router 7, TanStack Query 5 and Zod, with a Vercel Node functions API, Supabase (auth, Postgres and pg_cron scheduling) and Resend for email. Security was a core focus: sessions live in httpOnly cookies with no API keys in the browser, data sits in a private Postgres schema with row-level security and a least-privilege role, users' Growatt and Octopus credentials are encrypted with AES-256-GCM, and sign-in supports Google, email confirmation and authenticator-app MFA. I built the frontend; the API and database layer were built with Claude Code, with me setting the requirements and testing against real hardware. Live in beta for up to 20 users, each connecting their own accounts.",
   },
   {
     id: 9,
-    category: "personal",
-    title: "Netmatters Reflection",
-    image: reflection,
-    link: "https://reflection.angelov.uk/",
-    github: "https://github.com/angelangelov88/reflection/tree/php-reflection",
-    description:
-      "A full replication of the Netmatters website built from scratch. Started with HTML and CSS (SASS), then extended with JavaScript to add interactive features including a hamburger menu, side navigation, hero image slider, sticky header, and cookie banner. Later added PHP functionality with a contact form using both client-side (HTML5, JavaScript) and server-side (PHP) validation, a MySQL database connection for form submissions, and dynamic news cards pulling randomised content from a database.",
-  },
-  {
-    id: 10,
-    category: "personal",
-    title: "Bakery Website",
-    image: bakery,
-    link: "https://bakers-dozen.angelov.uk/",
-    github: "https://github.com/donk3ylee/trifecta-perfecta",
-    description:
-      "A team project to build a website for a local bakery from scratch using a design mockup as reference. I was responsible for the header, footer, About Us page, and Products page, as well as cross-browser compatibility and responsiveness across all screen sizes. Built with HTML, CSS, and JavaScript. We ran daily standups to stay aligned and I handled debugging across browsers and devices.",
-  },
-  {
-    id: 11,
     category: "personal",
     title: "React Weather App",
     image: weather,
@@ -118,7 +98,7 @@ export const PROJECTS: Project[] = [
       "A mobile-first weather app built with React, consuming the OpenWeatherMap API. Displays city, country, temperature, feels-like temperature, and weather conditions. API key is protected via dotenv and excluded from version control. Built using React hooks for state management and async fetch for data retrieval.",
   },
   {
-    id: 12,
+    id: 10,
     category: "personal",
     title: "Vue Films App",
     image: vueFilms,
@@ -128,7 +108,7 @@ export const PROJECTS: Project[] = [
       "A mobile-first films app built with Vue.js, consuming The Movie Database API. Displays movie posters, titles, and release dates. My first Vue project — built to learn Vue's reactivity system and component model. API key protected via dotenv.",
   },
   {
-    id: 13,
+    id: 11,
     category: "personal",
     title: "React Holidays App",
     image: reactHolidays,
@@ -136,6 +116,26 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/angelangelov88/react-holidays",
     description:
       "A mobile-first public holidays app built with React, consuming the Holiday API. Lets users look up public holidays by country and year. Built using React hooks and async fetch, with the API key protected via dotenv.",
+  },
+  {
+    id: 12,
+    category: "personal",
+    title: "Netmatters Reflection",
+    image: reflection,
+    link: "https://reflection.angelov.uk/",
+    github: "https://github.com/angelangelov88/reflection/tree/php-reflection",
+    description:
+      "A full replication of the Netmatters website built from scratch. Started with HTML and CSS (SASS), then extended with JavaScript to add interactive features including a hamburger menu, side navigation, hero image slider, sticky header, and cookie banner. Later added PHP functionality with a contact form using both client-side (HTML5, JavaScript) and server-side (PHP) validation, a MySQL database connection for form submissions, and dynamic news cards pulling randomised content from a database.",
+  },
+  {
+    id: 13,
+    category: "personal",
+    title: "Bakery Website",
+    image: bakery,
+    link: "https://bakers-dozen.angelov.uk/",
+    github: "https://github.com/donk3ylee/trifecta-perfecta",
+    description:
+      "A team project to build a website for a local bakery from scratch using a design mockup as reference. I was responsible for the header, footer, About Us page, and Products page, as well as cross-browser compatibility and responsiveness across all screen sizes. Built with HTML, CSS, and JavaScript. We ran daily standups to stay aligned and I handled debugging across browsers and devices.",
   },
   {
     id: 14,
@@ -169,5 +169,9 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const PROFESSIONAL_PROJECTS = PROJECTS.filter((p) => p.category === "professional");
-export const PERSONAL_PROJECTS = PROJECTS.filter((p) => p.category === "personal");
+export const PROFESSIONAL_PROJECTS = PROJECTS.filter(
+  (p) => p.category === "professional",
+);
+export const PERSONAL_PROJECTS = PROJECTS.filter(
+  (p) => p.category === "personal",
+);
